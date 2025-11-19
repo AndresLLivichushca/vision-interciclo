@@ -1,6 +1,6 @@
-// src/highlight.cpp - CÓDIGO FINAL DEFINITIVO CORREGIDO
+// src/highlight.cpp
 #include "highlight.hpp"
-#include "processing.hpp" // Asume que processing.hpp define morphCloseK, etc.
+#include "processing.hpp"
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
@@ -9,8 +9,9 @@
 using namespace cv;
 
 // ===================== HELPERS: Operaciones Morfológicas y CC =====================
+// Mantenemos las funciones de ayuda que definiste (morphCloseK, keepLargeCC, fillHoles, etc.)
+// Estas funciones se definieron en el código que me pasaste.
 
-// Se mantienen las funciones de ayuda necesarias para la compilación
 static Mat morphOpenK(const Mat& bin, int k) {
   Mat out;
   morphologyEx(bin, out, MORPH_OPEN, getStructuringElement(MORPH_ELLIPSE, Size(k, k)));
@@ -58,12 +59,13 @@ static void fillHoles(Mat& bin) {
   bin |= holes;                 
 }
 
-// ===================== 1. Segmentación Anatómica en HU reales =====================
+
+// ===================== 1. Segmentación Anatómica en HU reales (CORREGIDA) =====================
 AnatomyMasks generateAnatomicalMasksHU(const Mat& hu32f) {
   CV_Assert(!hu32f.empty() && hu32f.type() == CV_32F);
   AnatomyMasks M;
 
-  // 1) Segmentación del Cuerpo
+  // 1) Segmentación del Cuerpo (Se mantiene)
   Mat body = (hu32f > -300.f);
   body.convertTo(body, CV_8U, 255);
   body = morphCloseK(body, 7);
@@ -74,45 +76,49 @@ AnatomyMasks generateAnatomicalMasksHU(const Mat& hu32f) {
     return M;
   }
 
-  // 2) Umbralización por Rangos HU
+  // 2) Umbralización por Rangos HU (RANGOS CORREGIDOS para GRASA, MÚSCULO y HUESO)
   Mat fat, muscle, bone;
-  // Usamos lógica booleana para asegurar la consistencia con el código de debug de main.cpp
-  fat    = (hu32f >= -250.f) & (hu32f <= -50.f);      // Grasa: -250 a -50 HU
-  muscle = (hu32f > -50.f) & (hu32f <= 150.f);    // Músculo/Tejido Blando: -50 a 150 HU
-  bone   = (hu32f > 500.f);     // Hueso Cortical: 500+ HU (ULTRA ESTRICTO)
+  
+  // Grasa: Rango más estricto (-190 HU a -30 HU)
+  fat    = (hu32f >= -190.f) & (hu32f <= -30.f);      
+  // Músculo: Rango más estricto (10 HU a 120 HU)
+  muscle = (hu32f >= 10.f) & (hu32f <= 120.f);        
+  // Hueso: (200+ HU, incluye cortical y esponjoso)
+  bone   = (hu32f > 200.f);                           
 
   fat.convertTo(fat, CV_8U);
   muscle.convertTo(muscle, CV_8U);
   bone.convertTo(bone, CV_8U);
 
-  // 3) Recorte a cuerpo
+  // 3) Recorte a cuerpo (Se mantiene)
   fat    &= body;
   muscle &= body;
   bone   &= body;
 
-  // 5) Limpieza Morfológica MÍNIMA y Componentes Conexos (Filtros ultra-suaves)
+  // 5) Limpieza Morfológica MÍNIMA y Componentes Conexos (Se mantiene)
   bone   = morphCloseK(bone, 3);
 
-  // MinArea muy bajos para preservar las regiones grandes que puedan estar fragmentadas
   fat    = keepLargeCC(fat,     5); 
   muscle = keepLargeCC(muscle, 10); 
   bone   = keepLargeCC(bone,     50);
 
   fillHoles(muscle); 
-  // AJUSTE CRÍTICO: NO RELLENAR LOS HUECOS DEL HUESO (Médula Ósea)
-  // fillHoles(bone); // <-- COMENTADO O ELIMINADO
 
-  // 6) Prioridad (Hueso > Músculo > Grasa)
+  // 6) Lógica de Prioridad y Exclusión (CRÍTICO)
   
-  // Prioridad Músculo > Grasa 
+  // Prioridad Músculo > Grasa: Si está clasificado como músculo, no puede ser grasa.
   fat.setTo(0, muscle); 
 
-  // Prioridad Hueso > Músculo y Grasa
-  // Usamos EROSIÓN MÁS AGRESIVA (K=3) en el hueso para proteger el tejido blando circundante.
+  // Prioridad Hueso (Erosionado) > Músculo y Grasa
+  // Protege el contorno del hueso
   Mat bone_erode = morphErodeK(bone, 3); 
-  
   muscle.setTo(0, bone_erode); 
   fat.setTo(0, bone_erode);    
+
+  // Hueso completo: Si algo es HUESO, no debe ser pintado como músculo o grasa.
+  muscle.setTo(0, bone);
+  fat.setTo(0, bone);
+
 
   M.fat            = fat;
   M.muscle_tendon  = muscle;
@@ -120,9 +126,8 @@ AnatomyMasks generateAnatomicalMasksHU(const Mat& hu32f) {
   return M;
 }
 
-// ===================== 2. Highlight ROI (Función de ejemplo) =====================
+// ===================== 2. Highlight ROI (Función de ejemplo, se mantiene) =====================
 HighlightResult highlightROI(const Mat& gray) {
-  // Se mantiene la función de ejemplo
   HighlightResult R;
   CV_Assert(!gray.empty());
 
@@ -144,7 +149,7 @@ HighlightResult highlightROI(const Mat& gray) {
 }
 
 
-// ===================== 3. Overlay coloreado (Alto Contraste) =====================
+// ===================== 3. Overlay coloreado (Alto Contraste) (Se mantiene) =====================
 Mat colorizeAndOverlay(const Mat& slice8u, const AnatomyMasks& m) {
   Mat base;
   if (slice8u.channels() == 1) cvtColor(slice8u, base, COLOR_GRAY2BGR);
@@ -153,18 +158,19 @@ Mat colorizeAndOverlay(const Mat& slice8u, const AnatomyMasks& m) {
   // Definición de colores BGR (Alto Contraste)
   Mat color = Mat::zeros(base.size(), base.type());
   
-  // 1. Grasa (Amarillo)
+  // ORDEN DE PINTADO: de menor a mayor prioridad
+  // 1. Grasa (Amarillo BGR)
   color.setTo(Scalar(  0, 255, 255), m.fat);           
-  // 2. Músculo/Tendón (Rojo)
+  // 2. Músculo/Tendón (Rojo BGR)
   color.setTo(Scalar(  0,   0, 255), m.muscle_tendon); 
-  // 3. Hueso (Azul)
+  // 3. Hueso (Azul BGR)
   color.setTo(Scalar(255,   0,   0), m.bones);         
   
   Mat out;
   // Resaltado fuerte (70% de máscara, 30% de fondo)
   addWeighted(base, 0.3, color, 0.7, 0, out);
 
-  // Dibujo de Contornos (Opcional, pero útil para visualización)
+  // Dibujo de Contornos (Se mantiene)
   auto drawContour = [&](const Mat& mask, const Scalar& bgr) {
     Mat edges; Canny(mask, edges, 50, 150);
     Mat dil; dilate(edges, dil, getStructuringElement(MORPH_ELLIPSE, Size(3,3)));

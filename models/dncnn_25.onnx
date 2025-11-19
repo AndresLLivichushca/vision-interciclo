@@ -1,0 +1,832 @@
+
+pytorch	2.9.1+cpu:¬·
+í
+input
+dncnn.0.weightconv2dnode_Conv_199"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+º
+conv2drelu	node_relu"ReluJå
+	namespace: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.1: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÉ
+pkg.torch.onnx.fx_nodei%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d,), kwargs = {})J>
+pkg.torch.onnx.name_scopes ['', 'dncnn', 'dncnn.1', 'relu']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+í
+relu
+dncnn.2.weightgetitemnode_Conv_202"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+…
+getitemrelu_1node_relu_1"ReluJè
+	namespaceÅ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.4: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÜ
+pkg.torch.onnx.fx_nodel%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem,), kwargs = {})J@
+pkg.torch.onnx.name_scopes"['', 'dncnn', 'dncnn.4', 'relu_1']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ñ
+relu_1
+dncnn.5.weight	getitem_3node_Conv_205"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+Õ
+	getitem_3relu_2node_relu_2"ReluJè
+	namespaceÅ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.7: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
+pkg.torch.onnx.fx_noden%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_3,), kwargs = {})J@
+pkg.torch.onnx.name_scopes"['', 'dncnn', 'dncnn.7', 'relu_2']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ñ
+relu_2
+dncnn.8.weight	getitem_6node_Conv_208"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+œ
+	getitem_6relu_3node_relu_3"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.10: torch.nn.modules.activation.ReLU/relu_3: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
+pkg.torch.onnx.fx_noden%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_6,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.10', 'relu_3']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ó
+relu_3
+dncnn.11.weight	getitem_9node_Conv_211"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+œ
+	getitem_9relu_4node_relu_4"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.13: torch.nn.modules.activation.ReLU/relu_4: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
+pkg.torch.onnx.fx_noden%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_9,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.13', 'relu_4']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_4
+dncnn.14.weight
+getitem_12node_Conv_214"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+—
+
+getitem_12relu_5node_relu_5"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.16: torch.nn.modules.activation.ReLU/relu_5: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
+pkg.torch.onnx.fx_nodeo%relu_5 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_12,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.16', 'relu_5']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_5
+dncnn.17.weight
+getitem_15node_Conv_217"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+—
+
+getitem_15relu_6node_relu_6"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.19: torch.nn.modules.activation.ReLU/relu_6: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
+pkg.torch.onnx.fx_nodeo%relu_6 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_15,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.19', 'relu_6']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_6
+dncnn.20.weight
+getitem_18node_Conv_220"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+—
+
+getitem_18relu_7node_relu_7"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.22: torch.nn.modules.activation.ReLU/relu_7: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
+pkg.torch.onnx.fx_nodeo%relu_7 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_18,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.22', 'relu_7']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_7
+dncnn.23.weight
+getitem_21node_Conv_223"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+—
+
+getitem_21relu_8node_relu_8"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.25: torch.nn.modules.activation.ReLU/relu_8: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
+pkg.torch.onnx.fx_nodeo%relu_8 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_21,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.25', 'relu_8']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_8
+dncnn.26.weight
+getitem_24node_Conv_226"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+—
+
+getitem_24relu_9node_relu_9"ReluJê
+	namespaceÇ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.28: torch.nn.modules.activation.ReLU/relu_9: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
+pkg.torch.onnx.fx_nodeo%relu_9 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_24,), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'dncnn', 'dncnn.28', 'relu_9']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ò
+relu_9
+dncnn.29.weight
+getitem_27node_Conv_229"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_27relu_10node_relu_10"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.31: torch.nn.modules.activation.ReLU/relu_10: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_10 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_27,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.31', 'relu_10']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ô
+relu_10
+dncnn.32.weight
+getitem_30node_Conv_232"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_30relu_11node_relu_11"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.34: torch.nn.modules.activation.ReLU/relu_11: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_11 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_30,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.34', 'relu_11']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ô
+relu_11
+dncnn.35.weight
+getitem_33node_Conv_235"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_33relu_12node_relu_12"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.37: torch.nn.modules.activation.ReLU/relu_12: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_12 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_33,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.37', 'relu_12']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ô
+relu_12
+dncnn.38.weight
+getitem_36node_Conv_238"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_36relu_13node_relu_13"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.40: torch.nn.modules.activation.ReLU/relu_13: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_13 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_36,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.40', 'relu_13']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ô
+relu_13
+dncnn.41.weight
+getitem_39node_Conv_241"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_39relu_14node_relu_14"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.43: torch.nn.modules.activation.ReLU/relu_14: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_14 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_39,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.43', 'relu_14']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ô
+relu_14
+dncnn.44.weight
+getitem_42node_Conv_244"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+÷
+
+getitem_42relu_15node_relu_15"ReluJë
+	namespaceÉ: __main__.DnCNN/dncnn: torch.nn.modules.container.Sequential/dncnn.46: torch.nn.modules.activation.ReLU/relu_15: aten.relu.defaultJñ
+pkg.torch.onnx.class_hierarchyt['__main__.DnCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jä
+pkg.torch.onnx.fx_nodep%relu_15 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_42,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'dncnn', 'dncnn.46', 'relu_15']J¨
+pkg.torch.onnx.stack_traceçFile "/home/pablomar/Escritorio/create_model.py", line 35, in forward
+    out = self.dncnn(x)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/pablomar/anaconda3/lib/python3.13/site-packages/torch/nn/modules/activation.py", line 144, in forward
+    return F.relu(input, inplace=self.inplace)
+ï
+relu_15
+dncnn.47.weightoutputnode_Conv_245"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†
+main_graph*Y@Bdncnn.0.weightj
+locationdncnn_25.onnx.dataj
+offset0j
+length2304p*]@Bdncnn.47.weightj
+locationdncnn_25.onnx.dataj
+offset2304j
+length2304p*^@@Bdncnn.2.weightj
+locationdncnn_25.onnx.dataj
+offset4608j
+length147456p*`@@Bdncnn.5.weightj
+locationdncnn_25.onnx.dataj
+offset152064j
+length147456p*`@@Bdncnn.8.weightj
+locationdncnn_25.onnx.dataj
+offset299520j
+length147456p*a@@Bdncnn.11.weightj
+locationdncnn_25.onnx.dataj
+offset446976j
+length147456p*a@@Bdncnn.14.weightj
+locationdncnn_25.onnx.dataj
+offset594432j
+length147456p*a@@Bdncnn.17.weightj
+locationdncnn_25.onnx.dataj
+offset741888j
+length147456p*a@@Bdncnn.20.weightj
+locationdncnn_25.onnx.dataj
+offset889344j
+length147456p*b@@Bdncnn.23.weightj
+locationdncnn_25.onnx.dataj
+offset1036800j
+length147456p*b@@Bdncnn.26.weightj
+locationdncnn_25.onnx.dataj
+offset1184256j
+length147456p*b@@Bdncnn.29.weightj
+locationdncnn_25.onnx.dataj
+offset1331712j
+length147456p*b@@Bdncnn.32.weightj
+locationdncnn_25.onnx.dataj
+offset1479168j
+length147456p*b@@Bdncnn.35.weightj
+locationdncnn_25.onnx.dataj
+offset1626624j
+length147456p*b@@Bdncnn.38.weightj
+locationdncnn_25.onnx.dataj
+offset1774080j
+length147456p*b@@Bdncnn.41.weightj
+locationdncnn_25.onnx.dataj
+offset1921536j
+length147456p*b@@Bdncnn.44.weightj
+locationdncnn_25.onnx.dataj
+offset2068992j
+length147456pZ«
+input
+
+
+
+Ä
+Ä"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
+!pkg.torch.onnx.original_node_namexb"
+output
+
+
+
+Ä
+Äj‹
+dncnn.0.weight
+
+@
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_dncnn_0_weightjﬁ
+dncnn.47.weight
+
+
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_dncnn_47_weightj(
+dncnn.2.weight
+
+@
+@
+
+j(
+dncnn.5.weight
+
+@
+@
+
+j(
+dncnn.8.weight
+
+@
+@
+
+j)
+dncnn.11.weight
+
+@
+@
+
+j)
+dncnn.14.weight
+
+@
+@
+
+j)
+dncnn.17.weight
+
+@
+@
+
+j)
+dncnn.20.weight
+
+@
+@
+
+j)
+dncnn.23.weight
+
+@
+@
+
+j)
+dncnn.26.weight
+
+@
+@
+
+j)
+dncnn.29.weight
+
+@
+@
+
+j)
+dncnn.32.weight
+
+@
+@
+
+j)
+dncnn.35.weight
+
+@
+@
+
+j)
+dncnn.38.weight
+
+@
+@
+
+j)
+dncnn.41.weight
+
+@
+@
+
+j)
+dncnn.44.weight
+
+@
+@
+
+j"
+conv2d
+
+
+@
+Ä
+Äj 
+relu
+
+
+@
+Ä
+Äj#
+getitem
+
+
+@
+Ä
+Äj"
+relu_1
+
+
+@
+Ä
+Äj%
+	getitem_3
+
+
+@
+Ä
+Äj"
+relu_2
+
+
+@
+Ä
+Äj%
+	getitem_6
+
+
+@
+Ä
+Äj"
+relu_3
+
+
+@
+Ä
+Äj%
+	getitem_9
+
+
+@
+Ä
+Äj"
+relu_4
+
+
+@
+Ä
+Äj&
+
+getitem_12
+
+
+@
+Ä
+Äj"
+relu_5
+
+
+@
+Ä
+Äj&
+
+getitem_15
+
+
+@
+Ä
+Äj"
+relu_6
+
+
+@
+Ä
+Äj&
+
+getitem_18
+
+
+@
+Ä
+Äj"
+relu_7
+
+
+@
+Ä
+Äj&
+
+getitem_21
+
+
+@
+Ä
+Äj"
+relu_8
+
+
+@
+Ä
+Äj&
+
+getitem_24
+
+
+@
+Ä
+Äj"
+relu_9
+
+
+@
+Ä
+Äj&
+
+getitem_27
+
+
+@
+Ä
+Äj#
+relu_10
+
+
+@
+Ä
+Äj&
+
+getitem_30
+
+
+@
+Ä
+Äj#
+relu_11
+
+
+@
+Ä
+Äj&
+
+getitem_33
+
+
+@
+Ä
+Äj#
+relu_12
+
+
+@
+Ä
+Äj&
+
+getitem_36
+
+
+@
+Ä
+Äj#
+relu_13
+
+
+@
+Ä
+Äj&
+
+getitem_39
+
+
+@
+Ä
+Äj#
+relu_14
+
+
+@
+Ä
+Äj&
+
+getitem_42
+
+
+@
+Ä
+Äj#
+relu_15
+
+
+@
+Ä
+ÄÇé1
+0pkg.torch.export.ExportedProgram.graph_signatureŸ0
+# inputs
+p_dncnn_0_weight: PARAMETER target='dncnn.0.weight'
+p_dncnn_2_weight: PARAMETER target='dncnn.2.weight'
+p_dncnn_3_weight: PARAMETER target='dncnn.3.weight'
+p_dncnn_3_bias: PARAMETER target='dncnn.3.bias'
+p_dncnn_5_weight: PARAMETER target='dncnn.5.weight'
+p_dncnn_6_weight: PARAMETER target='dncnn.6.weight'
+p_dncnn_6_bias: PARAMETER target='dncnn.6.bias'
+p_dncnn_8_weight: PARAMETER target='dncnn.8.weight'
+p_dncnn_9_weight: PARAMETER target='dncnn.9.weight'
+p_dncnn_9_bias: PARAMETER target='dncnn.9.bias'
+p_dncnn_11_weight: PARAMETER target='dncnn.11.weight'
+p_dncnn_12_weight: PARAMETER target='dncnn.12.weight'
+p_dncnn_12_bias: PARAMETER target='dncnn.12.bias'
+p_dncnn_14_weight: PARAMETER target='dncnn.14.weight'
+p_dncnn_15_weight: PARAMETER target='dncnn.15.weight'
+p_dncnn_15_bias: PARAMETER target='dncnn.15.bias'
+p_dncnn_17_weight: PARAMETER target='dncnn.17.weight'
+p_dncnn_18_weight: PARAMETER target='dncnn.18.weight'
+p_dncnn_18_bias: PARAMETER target='dncnn.18.bias'
+p_dncnn_20_weight: PARAMETER target='dncnn.20.weight'
+p_dncnn_21_weight: PARAMETER target='dncnn.21.weight'
+p_dncnn_21_bias: PARAMETER target='dncnn.21.bias'
+p_dncnn_23_weight: PARAMETER target='dncnn.23.weight'
+p_dncnn_24_weight: PARAMETER target='dncnn.24.weight'
+p_dncnn_24_bias: PARAMETER target='dncnn.24.bias'
+p_dncnn_26_weight: PARAMETER target='dncnn.26.weight'
+p_dncnn_27_weight: PARAMETER target='dncnn.27.weight'
+p_dncnn_27_bias: PARAMETER target='dncnn.27.bias'
+p_dncnn_29_weight: PARAMETER target='dncnn.29.weight'
+p_dncnn_30_weight: PARAMETER target='dncnn.30.weight'
+p_dncnn_30_bias: PARAMETER target='dncnn.30.bias'
+p_dncnn_32_weight: PARAMETER target='dncnn.32.weight'
+p_dncnn_33_weight: PARAMETER target='dncnn.33.weight'
+p_dncnn_33_bias: PARAMETER target='dncnn.33.bias'
+p_dncnn_35_weight: PARAMETER target='dncnn.35.weight'
+p_dncnn_36_weight: PARAMETER target='dncnn.36.weight'
+p_dncnn_36_bias: PARAMETER target='dncnn.36.bias'
+p_dncnn_38_weight: PARAMETER target='dncnn.38.weight'
+p_dncnn_39_weight: PARAMETER target='dncnn.39.weight'
+p_dncnn_39_bias: PARAMETER target='dncnn.39.bias'
+p_dncnn_41_weight: PARAMETER target='dncnn.41.weight'
+p_dncnn_42_weight: PARAMETER target='dncnn.42.weight'
+p_dncnn_42_bias: PARAMETER target='dncnn.42.bias'
+p_dncnn_44_weight: PARAMETER target='dncnn.44.weight'
+p_dncnn_45_weight: PARAMETER target='dncnn.45.weight'
+p_dncnn_45_bias: PARAMETER target='dncnn.45.bias'
+p_dncnn_47_weight: PARAMETER target='dncnn.47.weight'
+b_dncnn_3_running_mean: BUFFER target='dncnn.3.running_mean' persistent=True
+b_dncnn_3_running_var: BUFFER target='dncnn.3.running_var' persistent=True
+b_dncnn_3_num_batches_tracked: BUFFER target='dncnn.3.num_batches_tracked' persistent=True
+b_dncnn_6_running_mean: BUFFER target='dncnn.6.running_mean' persistent=True
+b_dncnn_6_running_var: BUFFER target='dncnn.6.running_var' persistent=True
+b_dncnn_6_num_batches_tracked: BUFFER target='dncnn.6.num_batches_tracked' persistent=True
+b_dncnn_9_running_mean: BUFFER target='dncnn.9.running_mean' persistent=True
+b_dncnn_9_running_var: BUFFER target='dncnn.9.running_var' persistent=True
+b_dncnn_9_num_batches_tracked: BUFFER target='dncnn.9.num_batches_tracked' persistent=True
+b_dncnn_12_running_mean: BUFFER target='dncnn.12.running_mean' persistent=True
+b_dncnn_12_running_var: BUFFER target='dncnn.12.running_var' persistent=True
+b_dncnn_12_num_batches_tracked: BUFFER target='dncnn.12.num_batches_tracked' persistent=True
+b_dncnn_15_running_mean: BUFFER target='dncnn.15.running_mean' persistent=True
+b_dncnn_15_running_var: BUFFER target='dncnn.15.running_var' persistent=True
+b_dncnn_15_num_batches_tracked: BUFFER target='dncnn.15.num_batches_tracked' persistent=True
+b_dncnn_18_running_mean: BUFFER target='dncnn.18.running_mean' persistent=True
+b_dncnn_18_running_var: BUFFER target='dncnn.18.running_var' persistent=True
+b_dncnn_18_num_batches_tracked: BUFFER target='dncnn.18.num_batches_tracked' persistent=True
+b_dncnn_21_running_mean: BUFFER target='dncnn.21.running_mean' persistent=True
+b_dncnn_21_running_var: BUFFER target='dncnn.21.running_var' persistent=True
+b_dncnn_21_num_batches_tracked: BUFFER target='dncnn.21.num_batches_tracked' persistent=True
+b_dncnn_24_running_mean: BUFFER target='dncnn.24.running_mean' persistent=True
+b_dncnn_24_running_var: BUFFER target='dncnn.24.running_var' persistent=True
+b_dncnn_24_num_batches_tracked: BUFFER target='dncnn.24.num_batches_tracked' persistent=True
+b_dncnn_27_running_mean: BUFFER target='dncnn.27.running_mean' persistent=True
+b_dncnn_27_running_var: BUFFER target='dncnn.27.running_var' persistent=True
+b_dncnn_27_num_batches_tracked: BUFFER target='dncnn.27.num_batches_tracked' persistent=True
+b_dncnn_30_running_mean: BUFFER target='dncnn.30.running_mean' persistent=True
+b_dncnn_30_running_var: BUFFER target='dncnn.30.running_var' persistent=True
+b_dncnn_30_num_batches_tracked: BUFFER target='dncnn.30.num_batches_tracked' persistent=True
+b_dncnn_33_running_mean: BUFFER target='dncnn.33.running_mean' persistent=True
+b_dncnn_33_running_var: BUFFER target='dncnn.33.running_var' persistent=True
+b_dncnn_33_num_batches_tracked: BUFFER target='dncnn.33.num_batches_tracked' persistent=True
+b_dncnn_36_running_mean: BUFFER target='dncnn.36.running_mean' persistent=True
+b_dncnn_36_running_var: BUFFER target='dncnn.36.running_var' persistent=True
+b_dncnn_36_num_batches_tracked: BUFFER target='dncnn.36.num_batches_tracked' persistent=True
+b_dncnn_39_running_mean: BUFFER target='dncnn.39.running_mean' persistent=True
+b_dncnn_39_running_var: BUFFER target='dncnn.39.running_var' persistent=True
+b_dncnn_39_num_batches_tracked: BUFFER target='dncnn.39.num_batches_tracked' persistent=True
+b_dncnn_42_running_mean: BUFFER target='dncnn.42.running_mean' persistent=True
+b_dncnn_42_running_var: BUFFER target='dncnn.42.running_var' persistent=True
+b_dncnn_42_num_batches_tracked: BUFFER target='dncnn.42.num_batches_tracked' persistent=True
+b_dncnn_45_running_mean: BUFFER target='dncnn.45.running_mean' persistent=True
+b_dncnn_45_running_var: BUFFER target='dncnn.45.running_var' persistent=True
+b_dncnn_45_num_batches_tracked: BUFFER target='dncnn.45.num_batches_tracked' persistent=True
+x: USER_INPUT
+
+# outputs
+conv2d_16: USER_OUTPUT
+Ç8
+2pkg.torch.export.ExportedProgram.range_constraints{}B
+ 

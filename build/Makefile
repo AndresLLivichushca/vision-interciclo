@@ -129,6 +129,30 @@ vision_interciclo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/build
 .PHONY : vision_interciclo/fast
 
+src/dnn_denoising.o: src/dnn_denoising.cpp.o
+.PHONY : src/dnn_denoising.o
+
+# target to build an object file
+src/dnn_denoising.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o
+.PHONY : src/dnn_denoising.cpp.o
+
+src/dnn_denoising.i: src/dnn_denoising.cpp.i
+.PHONY : src/dnn_denoising.i
+
+# target to preprocess a source file
+src/dnn_denoising.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i
+.PHONY : src/dnn_denoising.cpp.i
+
+src/dnn_denoising.s: src/dnn_denoising.cpp.s
+.PHONY : src/dnn_denoising.s
+
+# target to generate assembly for a file
+src/dnn_denoising.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s
+.PHONY : src/dnn_denoising.cpp.s
+
 src/highlight.o: src/highlight.cpp.o
 .PHONY : src/highlight.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vision_interciclo"
+	@echo "... src/dnn_denoising.o"
+	@echo "... src/dnn_denoising.i"
+	@echo "... src/dnn_denoising.s"
 	@echo "... src/highlight.o"
 	@echo "... src/highlight.i"
 	@echo "... src/highlight.s"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o"
+  "CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o.d"
   "CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o"
   "CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o.d"
   "CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o"

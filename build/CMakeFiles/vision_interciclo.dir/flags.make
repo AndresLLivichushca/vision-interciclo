@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DITK_FFTIMAGEFILTERINIT_FACTORY_REGISTER_MANAGER -DITK_IMAGEIO_FACTORY_REGISTER_MANAGER -DITK_MESHIO_FACTORY_REGISTER_MANAGER -DITK_TRANSFORMIO_FACTORY_REGISTER_MANAGER -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -D_POSIX_C_SOURCE=200809L
 
-CXX_INCLUDES = -I/home/pablomar/vision-interciclo/build/ITKFactoryRegistration -isystem /opt/itk-5.4/include/ITK-5.4 -isystem /opt/opencv-4.10/include/opencv4 -isystem /opt/itk-5.4/include/ITK-5.4/itkzlib-ng -isystem /opt/itk-5.4/include -isystem /opt/itk-5.4/include/ITK-5.4/itkjpeg -isystem /opt/itk-5.4/include/ITK-5.4/itkpng
+CXX_INCLUDES = -I/home/pablomar/vision-interciclo/build/ITKFactoryRegistration -I/home/pablomar/vision-interciclo/src -isystem /opt/itk-5.4/include/ITK-5.4 -isystem /opt/opencv-4.10/include/opencv4 -isystem /opt/itk-5.4/include/ITK-5.4/itkzlib-ng -isystem /opt/itk-5.4/include -isystem /opt/itk-5.4/include/ITK-5.4/itkjpeg -isystem /opt/itk-5.4/include/ITK-5.4/itkpng
 
 CXX_FLAGS =   -fno-sized-deallocation -msse2 -O3 -DNDEBUG -std=c++17
 

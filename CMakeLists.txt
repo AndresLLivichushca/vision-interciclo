@@ -4,7 +4,7 @@ project(VisionInterciclo CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Release)
 
-# Si instalaste en /opt, ayuda a CMake a encontrarlos (o pásalo por -DCMAKE_PREFIX_PATH)
+# Rutas a librerías (ajusta si es necesario)
 list(APPEND CMAKE_PREFIX_PATH "/opt/itk-5.4" "/opt/opencv-4.10")
 
 find_package(ITK REQUIRED)
@@ -18,7 +18,10 @@ add_executable(vision_interciclo
   src/itk_opencv_bridge.cpp
   src/processing.cpp
   src/highlight.cpp
+  src/dnn_denoising.cpp  # <--- CORREGIDO: ahora dice 'denoising'
 )
 
-target_include_directories(vision_interciclo PRIVATE ${OpenCV_INCLUDE_DIRS})
+# Incluimos 'src' para que los .cpp encuentren fácil sus .hpp
+target_include_directories(vision_interciclo PRIVATE ${OpenCV_INCLUDE_DIRS} src)
+
 target_link_libraries(vision_interciclo PRIVATE ${OpenCV_LIBS} ${ITK_LIBRARIES})
