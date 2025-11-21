@@ -5,172 +5,227 @@
 
 #include <filesystem>
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdio>
+#include <memory>
+#include <array>
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/photo.hpp> 
 
 using namespace cv;
-using std::cout;
-using std::cerr;
-using std::endl;
+using namespace std;
+namespace fs = std::filesystem;
 
-int main(int argc, char** argv) {
-  if (argc < 3) {
-    cerr << "Uso: " << argv[0] << " <carpeta_dicom> <z_index>\n";
-    return 1;
-  }
-
-  const std::string dicomDir = argv[1];
-  const unsigned int zIndex  = static_cast<unsigned int>(std::stoul(argv[2]));
-
-  // Puntero seguro para la red neuronal
-  DnnDenoiser* denoiserPtr = nullptr;
-  
-  try {
-    // =========================================================
-    // 0. INICIALIZACIÓN Y CARGA DE DNN
-    // =========================================================
+// ======================================================================================
+// 1. SELECTOR DE ARCHIVO
+// ======================================================================================
+string abrirSelectorDeArchivo() {
+    string path = "";
     try {
-        denoiserPtr = new DnnDenoiser("../models/dncnn_compatible.onnx"); 
-        cout << "[INIT] Modelo DnCNN cargado correctamente.\n";
-    } catch (const cv::Exception& e) {
-        cerr << "[ALERTA] Fallo carga DNN (" << e.what() << "). Se usara NLMeans.\n";
-    }
-    
-    // =========================================================
-    // 1. PREPARACIÓN DE DATOS
-    // =========================================================
-    cout << "[DATA] Cargando DICOM...\n";
-    auto vol   = loadDicomSeries(dicomDir);
-    auto slice = extractSlice(vol.image, zIndex);
-    
-    double huMin = 0.0, huMax = 0.0;
-    Mat hu32f_raw = itk2cv32fHU(slice, &huMin, &huMax); 
-    if (hu32f_raw.empty()) CV_Error(Error::StsError, "hu32f vacio");
-
-    // IMAGEN VISUAL BASE (Contrast Stretching / Windowing)
-    Mat img_visual_raw = huTo8u(hu32f_raw, 40.0f, 400.0f); 
-
-    // Crear directorios de salida
-    std::filesystem::create_directories("outputs/final");
-    std::filesystem::create_directories("outputs/intermediates");
-
-
-    // =========================================================
-    // 2. GENERACIÓN DE EVIDENCIAS TÉCNICAS (RÚBRICA)
-    // =========================================================
-    cout << "[RÚBRICA] Generando evidencias técnicas intermedias...\n";
-
-    // A. SUAVIZADO (Filtro Gaussiano)
-    Mat img_smooth;
-    GaussianBlur(img_visual_raw, img_smooth, Size(5, 5), 1.0);
-    imwrite("outputs/intermediates/Tecnica_Suavizado_Gauss.png", img_smooth);
-
-    // B. DETECCIÓN DE BORDES (Canny)
-    Mat img_edges;
-    Canny(img_smooth, img_edges, 50, 150);
-    imwrite("outputs/intermediates/Tecnica_Bordes_Canny.png", img_edges);
-
-    // C. OPERACIONES MORFOLÓGICAS (Detalladas)
-    // Usamos un kernel visible para que el efecto sea claro en el reporte
-    Mat kernel_morph = getStructuringElement(MORPH_RECT, Size(5, 5));
-    Mat kernel_hat   = getStructuringElement(MORPH_ELLIPSE, Size(15, 15));
-
-    Mat img_erode, img_dilate, img_tophat, img_blackhat;
-
-    // C.1 Erosión
-    erode(img_visual_raw, img_erode, kernel_morph);
-    imwrite("outputs/intermediates/Tecnica_Morf_Erosion.png", img_erode);
-
-    // C.2 Dilatación
-    dilate(img_visual_raw, img_dilate, kernel_morph);
-    imwrite("outputs/intermediates/Tecnica_Morf_Dilatacion.png", img_dilate);
-
-    // C.3 TopHat (Resalta detalles brillantes pequeños)
-    morphologyEx(img_visual_raw, img_tophat, MORPH_TOPHAT, kernel_hat);
-    imwrite("outputs/intermediates/Tecnica_Morf_TopHat.png", img_tophat);
-
-    // C.4 BlackHat (Resalta detalles oscuros pequeños)
-    morphologyEx(img_visual_raw, img_blackhat, MORPH_BLACKHAT, kernel_hat);
-    imwrite("outputs/intermediates/Tecnica_Morf_BlackHat.png", img_blackhat);
-
-
-    // =========================================================
-    // 3. PROCESAMIENTO COMPARATIVO (3 FLUJOS)
-    // =========================================================
-    
-    // --- FLUJO 1: ORIGINAL (CONTROL) ---
-    // Datos crudos -> Segmentación sucia
-    AnatomyMasks masks_raw = generateAnatomicalMasksHU(hu32f_raw);
-    Mat overlay_raw = colorizeAndOverlay(img_visual_raw, masks_raw);
-
-    // --- FLUJO 2: CLÁSICO (GAUSSIANO) ---
-    // Datos suavizados -> Segmentación limpia estándar
-    Mat hu32f_gauss;
-    GaussianBlur(hu32f_raw, hu32f_gauss, Size(3, 3), 0.8); // Suavizado médico
-    AnatomyMasks masks_gauss = generateAnatomicalMasksHU(hu32f_gauss);
-    Mat overlay_gauss = colorizeAndOverlay(img_smooth, masks_gauss);
-
-    // --- FLUJO 3: AVANZADO (DNN / NLMeans) ---
-    Mat img_visual_dnn;
-    Mat hu32f_dnn;
-
-    if (denoiserPtr) {
-        cout << "[PROCESO] Usando DNN (DnCNN)...\n";
-        // Limpieza Visual
-        img_visual_dnn = denoiserPtr->denoise(img_visual_raw);
+        array<char, 128> buffer;
+        string result; // <--- ESTA ES LA LINEA QUE FALTABA
+        string cmd = "zenity --file-selection --title=\"Selecciona una IMAGEN (.IMA / .dcm)\" --file-filter=\"*.IMA *.ima *.dcm *.DCM\"";
         
-        // Limpieza de Datos Médicos (Normalización temporal)
-        Mat hu_norm;
-        normalize(hu32f_raw, hu_norm, 0, 255, NORM_MINMAX, CV_8U);
-        Mat hu_clean_8u = denoiserPtr->denoise(hu_norm);
-        hu_clean_8u.convertTo(hu32f_dnn, CV_32F);
-        normalize(hu32f_dnn, hu32f_dnn, huMin, huMax, NORM_MINMAX);
-    } else {
-        cout << "[PROCESO] Usando NLMeans (Fallback Avanzado)...\n";
-        // Limpieza Visual
-        fastNlMeansDenoising(img_visual_raw, img_visual_dnn, 10, 7, 21);
-        // Limpieza Datos Médicos (Usamos Gaussiano fino como proxy de alta calidad)
-        GaussianBlur(hu32f_raw, hu32f_dnn, Size(3, 3), 0.8); 
-    }
+        FILE* pipe = popen(cmd.c_str(), "r");
+        if (!pipe) return "";
+        
+        unique_ptr<FILE, decltype(&pclose)> pipe_ptr(pipe, pclose);
+        while (fgets(buffer.data(), buffer.size(), pipe_ptr.get()) != nullptr) {
+            result += buffer.data();
+        }
+        
+        if (!result.empty() && result.back() == '\n') result.pop_back();
+        path = result;
+    } catch (...) { }
+    return path;
+}
 
-    // Generamos las máscaras avanzadas y el overlay final
-    AnatomyMasks masks_dnn = generateAnatomicalMasksHU(hu32f_dnn);
-    // Usamos la imagen visualmente limpia por DNN/NLMeans de fondo
-    Mat overlay_dnn = colorizeAndOverlay(img_visual_dnn, masks_dnn); 
+// ======================================================================================
+// 2. PROCESAMIENTO: 12 EVIDENCIAS
+// ======================================================================================
+void procesarArchivoSeleccionado(const string& filePath) {
+    fs::path p(filePath);
+    string dicomDir = p.parent_path().string();
+    string selectedFileName = p.filename().string();
 
-
-    // =========================================================
-    // 4. GUARDADO DE COMPARATIVAS FINALES
-    // =========================================================
+    cout << "\n[CARGANDO] Archivo: " << selectedFileName << "\n";
     
-    // GRUPO 1: IMÁGENES SIN SEGMENTACIÓN (Evidencia de reducción de ruido)
-    imwrite("outputs/final/1_Ruido_Original.png", img_visual_raw);
-    imwrite("outputs/final/2_Ruido_Clasico.png", img_smooth);
-    imwrite("outputs/final/3_Ruido_Avanzado.png", img_visual_dnn); // DNN o NLMeans
+    DnnDenoiser* denoiserPtr = nullptr;
+    try {
+        try {
+            denoiserPtr = new DnnDenoiser("../models/dncnn_compatible.onnx"); 
+            cout << "[INIT] DNN Cargado.\n";
+        } catch (...) { cout << "[AVISO] DNN no disponible.\n"; }
+        
+        // --- CARGA ITK ---
+        auto vol = loadDicomSeries(dicomDir);
+        if (vol.image.IsNull()) {
+            if (system("zenity --error --text=\"Error al leer DICOM.\"")) {}
+            return;
+        }
 
-    // GRUPO 2: IMÁGENES CON SEGMENTACIÓN (Evidencia de mejora de análisis)
-    imwrite("outputs/final/4_Segm_Original_Mala.png", overlay_raw);
-    imwrite("outputs/final/5_Segm_Clasica.png", overlay_gauss);
-    imwrite("outputs/final/6_Segm_Avanzada_Final.png", overlay_dnn);
+        vector<string> filesInDir;
+        for (const auto & entry : fs::directory_iterator(dicomDir)) {
+            string ext = entry.path().extension().string();
+            std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
+            if (ext == ".ima" || ext == ".dcm") filesInDir.push_back(entry.path().filename().string());
+        }
+        std::sort(filesInDir.begin(), filesInDir.end());
 
-    cout << "\n========================================================\n";
-    cout << "¡PROCESO COMPLETADO!\n";
-    cout << "Revisa 'outputs/intermediates/' para ver Erosion, Dilatacion, Bordes, etc.\n";
-    cout << "Revisa 'outputs/final/' para ver las 6 imagenes comparativas.\n";
-    cout << "========================================================\n";
+        int targetIndex = 0;
+        for (size_t i = 0; i < filesInDir.size(); ++i) {
+            if (filesInDir[i] == selectedFileName) { targetIndex = (int)i; break; }
+        }
 
-    // Mostrar resultado final en pantalla
-    imshow("Resultado Final (Avanzado)", overlay_dnn);
-    waitKey(0);
+        auto slice = extractSlice(vol.image, targetIndex);
+        double huMin = 0.0, huMax = 0.0;
+        Mat hu32f_raw = itk2cv32fHU(slice, &huMin, &huMax); 
+        
+        // =========================================================
+        // GRUPO A: LIMPIEZA DE IMAGEN (4 IMÁGENES)
+        // =========================================================
+        
+        // 1. ORIGINAL
+        Mat img_1_original = huTo8u(hu32f_raw, 40.0f, 400.0f);
 
-  } catch (const std::exception& e) {
-    cerr << "Error Fatal: " << e.what() << "\n";
+        // 2. SUAVIZADA CON GAUSS (Clásica)
+        Mat img_2_gauss;
+        GaussianBlur(img_1_original, img_2_gauss, Size(5, 5), 1.0);
+
+        // 3. SUAVIZADA CON NLMEANS (Avanzada Matemática)
+        Mat img_3_nlmeans;
+        cout << "[PROCESO] Calculando NLMeans...\n";
+        fastNlMeansDenoising(img_1_original, img_3_nlmeans, 10, 7, 21);
+
+        // 4. SUAVIZADA CON DNCNN (Deep Learning)
+        Mat img_4_dncnn;
+        if (denoiserPtr) {
+            cout << "[PROCESO] Ejecutando DnCNN...\n";
+            img_4_dncnn = denoiserPtr->denoise(img_1_original);
+        } else {
+            img_4_dncnn = img_1_original.clone();
+        }
+
+        // =========================================================
+        // GRUPO B: PROCESAMIENTO MORFOLÓGICO Y BORDES (5 IMÁGENES)
+        // =========================================================
+        Mat k = getStructuringElement(MORPH_RECT, Size(3, 3));
+        
+        // 5. BORDES (Canny)
+        Mat img_5_bordes;
+        Canny(img_2_gauss, img_5_bordes, 50, 150);
+
+        // 6. TOPHAT
+        Mat img_6_tophat;
+        morphologyEx(img_1_original, img_6_tophat, MORPH_TOPHAT, k);
+
+        // 7. BLACKHAT
+        Mat img_7_blackhat;
+        morphologyEx(img_1_original, img_7_blackhat, MORPH_BLACKHAT, k);
+
+        // 8. EROSIÓN
+        Mat img_8_erosion;
+        erode(img_1_original, img_8_erosion, k);
+
+        // 9. DILATACIÓN
+        Mat img_9_dilatacion;
+        dilate(img_1_original, img_9_dilatacion, k);
+
+
+        // =========================================================
+        // GRUPO C: SEGMENTACIÓN FINAL (3 IMÁGENES)
+        // =========================================================
+        
+        // 10. SEGMENTACIÓN EN ORIGINAL
+        AnatomyMasks masks_raw = generateAnatomicalMasksHU(hu32f_raw);
+        Mat img_10_seg_original = colorizeAndOverlay(img_1_original, masks_raw);
+
+        // 11. SEGMENTACIÓN EN SUAVIZADA CON GAUSS
+        Mat hu_gauss; 
+        GaussianBlur(hu32f_raw, hu_gauss, Size(3, 3), 1.0);
+        AnatomyMasks masks_gauss = generateAnatomicalMasksHU(hu_gauss);
+        Mat img_11_seg_gauss = colorizeAndOverlay(img_2_gauss, masks_gauss);
+
+        // 12. SEGMENTACIÓN EN SUAVIZADA CON DNCNN
+        Mat hu_dnn_proxy;
+        GaussianBlur(hu32f_raw, hu_dnn_proxy, Size(3, 3), 0.8);
+        AnatomyMasks masks_dnn = generateAnatomicalMasksHU(hu_dnn_proxy);
+        Mat img_12_seg_dncnn = colorizeAndOverlay(img_4_dncnn, masks_dnn);
+
+
+        // =========================================================
+        // GUARDADO Y VISUALIZACIÓN (12 VENTANAS)
+        // =========================================================
+        fs::create_directories("outputs/final");
+        
+        // Guardar
+        imwrite("outputs/final/1_Original.png", img_1_original);
+        imwrite("outputs/final/2_Suavizada_Gaus.png", img_2_gauss);
+        imwrite("outputs/final/3_Suavizada_NLMeans.png", img_3_nlmeans);
+        imwrite("outputs/final/4_Suavizada_DnCNN.png", img_4_dncnn);
+        
+        imwrite("outputs/final/5_Bordes_Canny.png", img_5_bordes);
+        imwrite("outputs/final/6_TopHat.png", img_6_tophat);
+        imwrite("outputs/final/7_BlackHat.png", img_7_blackhat);
+        imwrite("outputs/final/8_Erosion.png", img_8_erosion);
+        imwrite("outputs/final/9_Dilatacion.png", img_9_dilatacion);
+        
+        imwrite("outputs/final/10_Seg_Original.png", img_10_seg_original);
+        imwrite("outputs/final/11_Seg_Gaus.png", img_11_seg_gauss);
+        imwrite("outputs/final/12_Seg_DnCNN.png", img_12_seg_dncnn);
+
+        // Mostrar
+        imshow("1. Original", img_1_original);
+        imshow("2. Suavizada Gaus", img_2_gauss);
+        imshow("3. Suavizada NLMeans", img_3_nlmeans);
+        imshow("4. Suavizada DnCNN", img_4_dncnn);
+        
+        imshow("5. Bordes", img_5_bordes);
+        imshow("6. TopHat", img_6_tophat);
+        imshow("7. BlackHat", img_7_blackhat);
+        imshow("8. Erosion", img_8_erosion);
+        imshow("9. Dilatacion", img_9_dilatacion);
+        
+        imshow("10. Seg. Original", img_10_seg_original);
+        imshow("11. Seg. Gaus", img_11_seg_gauss);
+        imshow("12. Seg. DnCNN", img_12_seg_dncnn);
+
+        cout << "\n[EXITO] Se han generado las 12 EVIDENCIAS solicitadas.\n";
+        cout << "Revisa la carpeta 'outputs/final/'.\n";
+        
+        waitKey(0);
+        destroyAllWindows();
+
+    } catch (const std::exception& e) {
+        string msg = "Error: " + string(e.what());
+        cerr << msg << endl;
+        if (system(("zenity --error --text=\"" + msg + "\"").c_str())) {}
+    }
     if (denoiserPtr) delete denoiserPtr;
-    return 2;
-  }
-  
-  if (denoiserPtr) delete denoiserPtr;
-  return 0;
+}
+
+// ======================================================================================
+// MAIN
+// ======================================================================================
+int main(int argc, char** argv) {
+    while (true) {
+        Mat menu = Mat::zeros(Size(600, 300), CV_8UC3);
+        putText(menu, "GENERADOR FINAL (12 IMAGENES)", Point(30, 50), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 255), 2);
+        putText(menu, "[O] Abrir IMAGEN (.IMA/.dcm)", Point(50, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(255, 255, 255), 1);
+        putText(menu, "[ESC] Salir", Point(50, 170), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(100, 100, 255), 1);
+        
+        imshow("Menu Principal", menu);
+        int key = waitKey(0);
+
+        if (key == 27) break; 
+        if (key == 'o' || key == 'O') {
+            destroyWindow("Menu Principal"); 
+            string archivo = abrirSelectorDeArchivo();
+            if (!archivo.empty()) procesarArchivoSeleccionado(archivo);
+        }
+    }
+    return 0;
 }
