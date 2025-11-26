@@ -20,18 +20,19 @@ using namespace std;
 namespace fs = std::filesystem;
 
 // ======================================================================================
-// 1. SELECTOR DE ARCHIVO
+// 1. SELECTOR DE ARCHIVO (Nativo Linux)
 // ======================================================================================
 string abrirSelectorDeArchivo() {
     string path = "";
     try {
         array<char, 128> buffer;
-        string result; // <--- ESTA ES LA LINEA QUE FALTABA
+        string result;
         string cmd = "zenity --file-selection --title=\"Selecciona una IMAGEN (.IMA / .dcm)\" --file-filter=\"*.IMA *.ima *.dcm *.DCM\"";
         
         FILE* pipe = popen(cmd.c_str(), "r");
         if (!pipe) return "";
         
+        // Usamos unique_ptr para manejo seguro de memoria del pipe
         unique_ptr<FILE, decltype(&pclose)> pipe_ptr(pipe, pclose);
         while (fgets(buffer.data(), buffer.size(), pipe_ptr.get()) != nullptr) {
             result += buffer.data();
@@ -44,7 +45,7 @@ string abrirSelectorDeArchivo() {
 }
 
 // ======================================================================================
-// 2. PROCESAMIENTO: 12 EVIDENCIAS
+// 2. PROCESAMIENTO: 13 EVIDENCIAS (CORREGIDO)
 // ======================================================================================
 void procesarArchivoSeleccionado(const string& filePath) {
     fs::path p(filePath);
@@ -110,11 +111,11 @@ void procesarArchivoSeleccionado(const string& filePath) {
         }
 
         // =========================================================
-        // GRUPO B: PROCESAMIENTO MORFOLÓGICO Y BORDES (5 IMÁGENES)
+        // GRUPO B: TÉCNICAS INTERMEDIAS (5 IMÁGENES)
         // =========================================================
         Mat k = getStructuringElement(MORPH_RECT, Size(3, 3));
         
-        // 5. BORDES (Canny)
+        // 5. BORDES
         Mat img_5_bordes;
         Canny(img_2_gauss, img_5_bordes, 50, 150);
 
@@ -136,7 +137,7 @@ void procesarArchivoSeleccionado(const string& filePath) {
 
 
         // =========================================================
-        // GRUPO C: SEGMENTACIÓN FINAL (3 IMÁGENES)
+        // GRUPO C: SEGMENTACIÓN FINAL (4 IMÁGENES)
         // =========================================================
         
         // 10. SEGMENTACIÓN EN ORIGINAL
@@ -149,52 +150,59 @@ void procesarArchivoSeleccionado(const string& filePath) {
         AnatomyMasks masks_gauss = generateAnatomicalMasksHU(hu_gauss);
         Mat img_11_seg_gauss = colorizeAndOverlay(img_2_gauss, masks_gauss);
 
-        // 12. SEGMENTACIÓN EN SUAVIZADA CON DNCNN
+        // 12. SEGMENTACIÓN EN NLMEANS (Avanzada 1)
+        // Aquí estaba el error: Definimos explícitamente la variable
+        Mat img_12_seg_nlmeans = colorizeAndOverlay(img_3_nlmeans, masks_gauss);
+
+        // 13. SEGMENTACIÓN EN DNCNN (Avanzada 2)
         Mat hu_dnn_proxy;
         GaussianBlur(hu32f_raw, hu_dnn_proxy, Size(3, 3), 0.8);
         AnatomyMasks masks_dnn = generateAnatomicalMasksHU(hu_dnn_proxy);
-        Mat img_12_seg_dncnn = colorizeAndOverlay(img_4_dncnn, masks_dnn);
+        Mat img_13_seg_dncnn = colorizeAndOverlay(img_4_dncnn, masks_dnn);
 
 
         // =========================================================
-        // GUARDADO Y VISUALIZACIÓN (12 VENTANAS)
+        // GUARDADO Y VISUALIZACIÓN (13 VENTANAS)
         // =========================================================
         fs::create_directories("outputs/final");
         
-        // Guardar
+        // Guardar Grupo A
         imwrite("outputs/final/1_Original.png", img_1_original);
-        imwrite("outputs/final/2_Suavizada_Gaus.png", img_2_gauss);
-        imwrite("outputs/final/3_Suavizada_NLMeans.png", img_3_nlmeans);
-        imwrite("outputs/final/4_Suavizada_DnCNN.png", img_4_dncnn);
+        imwrite("outputs/final/2_Gauss.png", img_2_gauss);
+        imwrite("outputs/final/3_NLMeans.png", img_3_nlmeans);
+        imwrite("outputs/final/4_DnCNN.png", img_4_dncnn);
         
+        // Guardar Grupo B
         imwrite("outputs/final/5_Bordes_Canny.png", img_5_bordes);
         imwrite("outputs/final/6_TopHat.png", img_6_tophat);
         imwrite("outputs/final/7_BlackHat.png", img_7_blackhat);
         imwrite("outputs/final/8_Erosion.png", img_8_erosion);
         imwrite("outputs/final/9_Dilatacion.png", img_9_dilatacion);
         
+        // Guardar Grupo C
         imwrite("outputs/final/10_Seg_Original.png", img_10_seg_original);
         imwrite("outputs/final/11_Seg_Gaus.png", img_11_seg_gauss);
-        imwrite("outputs/final/12_Seg_DnCNN.png", img_12_seg_dncnn);
+        imwrite("outputs/final/12_Seg_NLMeans.png", img_12_seg_nlmeans); // Ahora sí existe
+        imwrite("outputs/final/13_Seg_DnCNN.png", img_13_seg_dncnn);
 
-        // Mostrar
+        // Mostrar en Pantalla (Solo las principales para no colapsar)
         imshow("1. Original", img_1_original);
-        imshow("2. Suavizada Gaus", img_2_gauss);
-        imshow("3. Suavizada NLMeans", img_3_nlmeans);
-        imshow("4. Suavizada DnCNN", img_4_dncnn);
+        imshow("2. Gauss", img_2_gauss);
+        imshow("3. NLMeans", img_3_nlmeans);
+        imshow("4. DnCNN", img_4_dncnn);
         
+        // Técnicas Intermedias (Muestra)
         imshow("5. Bordes", img_5_bordes);
         imshow("6. TopHat", img_6_tophat);
-        imshow("7. BlackHat", img_7_blackhat);
-        imshow("8. Erosion", img_8_erosion);
-        imshow("9. Dilatacion", img_9_dilatacion);
         
+        // Segmentaciones
         imshow("10. Seg. Original", img_10_seg_original);
-        imshow("11. Seg. Gaus", img_11_seg_gauss);
-        imshow("12. Seg. DnCNN", img_12_seg_dncnn);
+        imshow("11. Seg. Gauss", img_11_seg_gauss);
+        imshow("12. Seg. NLMeans", img_12_seg_nlmeans);
+        imshow("13. Seg. DnCNN", img_13_seg_dncnn);
 
-        cout << "\n[EXITO] Se han generado las 12 EVIDENCIAS solicitadas.\n";
-        cout << "Revisa la carpeta 'outputs/final/'.\n";
+        cout << "\n[EXITO] Se han generado las 13 EVIDENCIAS en 'outputs/final/'.\n";
+        cout << "Presiona una tecla en las ventanas para cerrar...\n";
         
         waitKey(0);
         destroyAllWindows();
@@ -213,7 +221,7 @@ void procesarArchivoSeleccionado(const string& filePath) {
 int main(int argc, char** argv) {
     while (true) {
         Mat menu = Mat::zeros(Size(600, 300), CV_8UC3);
-        putText(menu, "GENERADOR FINAL (12 IMAGENES)", Point(30, 50), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 255), 2);
+        putText(menu, "GENERADOR FINAL (13 IMAGENES)", Point(30, 50), FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0, 255, 255), 2);
         putText(menu, "[O] Abrir IMAGEN (.IMA/.dcm)", Point(50, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(255, 255, 255), 1);
         putText(menu, "[ESC] Salir", Point(50, 170), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(100, 100, 255), 1);
         
