@@ -25,7 +25,7 @@ namespace itk {
 //  The following code is intended to be expanded at the end of the
 //  itk<config>FFTImageFilter.h files
 //
-void  VnlFFTImageFilterInitFactoryRegister__Private();
+void ITK_ABI_IMPORT FFTWFFTImageFilterInitFactoryRegister__Private();void ITK_ABI_IMPORT VnlFFTImageFilterInitFactoryRegister__Private();
 
 class FFTImageFilterInitFactoryRegisterManager
 {
@@ -45,7 +45,7 @@ class FFTImageFilterInitFactoryRegisterManager
 // ITK-based applications and not in ITK itself.
 //
 void (* const FFTImageFilterInitFactoryRegisterList[])(void) = {
-  VnlFFTImageFilterInitFactoryRegister__Private,
+  FFTWFFTImageFilterInitFactoryRegister__Private,VnlFFTImageFilterInitFactoryRegister__Private,
   nullptr};
 const FFTImageFilterInitFactoryRegisterManager FFTImageFilterInitFactoryRegisterManagerInstance(FFTImageFilterInitFactoryRegisterList);
 

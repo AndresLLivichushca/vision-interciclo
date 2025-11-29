@@ -1,6 +1,7 @@
 CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
- /home/pablomar/vision-interciclo/src/main.cpp /usr/include/stdc-predef.h \
- /home/pablomar/vision-interciclo/src/itk_loader.hpp \
+ /home/andres/Documents/interciclo/src/main.cpp \
+ /usr/include/stdc-predef.h \
+ /home/andres/Documents/interciclo/src/itk_loader.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -126,19 +127,15 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
- /opt/itk-5.4/include/ITK-5.4/itkImage.h \
- /opt/itk-5.4/include/ITK-5.4/itkImageRegion.h \
- /opt/itk-5.4/include/ITK-5.4/itkRegion.h \
- /opt/itk-5.4/include/ITK-5.4/itkObject.h \
- /opt/itk-5.4/include/ITK-5.4/itkLightObject.h \
- /opt/itk-5.4/include/ITK-5.4/itkMacro.h \
- /opt/itk-5.4/include/ITK-5.4/itkWin32Header.h \
- /opt/itk-5.4/include/ITK-5.4/itkConfigure.h \
- /opt/itk-5.4/include/ITK-5.4/ITKCommonExport.h \
- /usr/include/c++/13/typeinfo /usr/include/c++/13/sstream \
- /usr/include/c++/13/istream /usr/include/c++/13/ios \
- /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/ITK-5.3/itkImage.h \
+ /usr/include/ITK-5.3/itkImageRegion.h /usr/include/ITK-5.3/itkRegion.h \
+ /usr/include/ITK-5.3/itkObject.h /usr/include/ITK-5.3/itkLightObject.h \
+ /usr/include/ITK-5.3/itkMacro.h /usr/include/ITK-5.3/itkWin32Header.h \
+ /usr/include/ITK-5.3/itkConfigure.h \
+ /usr/include/ITK-5.3/ITKCommonExport.h /usr/include/c++/13/typeinfo \
+ /usr/include/c++/13/sstream /usr/include/c++/13/istream \
+ /usr/include/c++/13/ios /usr/include/c++/13/exception \
+ /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
@@ -174,8 +171,8 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
- /opt/itk-5.4/include/ITK-5.4/itkExceptionObject.h \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/ITK-5.3/itkExceptionObject.h /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -193,12 +190,10 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /opt/itk-5.4/include/ITK-5.4/itkSmartPointer.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/utility \
- /usr/include/c++/13/bits/stl_relops.h \
- /opt/itk-5.4/include/ITK-5.4/itkTimeStamp.h \
- /opt/itk-5.4/include/ITK-5.4/itkIntTypes.h /usr/include/c++/13/cstdint \
- /usr/include/c++/13/climits \
+ /usr/include/ITK-5.3/itkSmartPointer.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
+ /usr/include/ITK-5.3/itkTimeStamp.h /usr/include/ITK-5.3/itkIntTypes.h \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -207,11 +202,10 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/13/atomic \
- /opt/itk-5.4/include/ITK-5.4/itkSingletonMacro.h \
- /opt/itk-5.4/include/ITK-5.4/itkIndent.h \
- /opt/itk-5.4/include/ITK-5.4/itkEventObject.h \
- /opt/itk-5.4/include/ITK-5.4/itkMetaDataDictionary.h \
- /opt/itk-5.4/include/ITK-5.4/itkMetaDataObjectBase.h \
+ /usr/include/ITK-5.3/itkSingletonMacro.h \
+ /usr/include/ITK-5.3/itkIndent.h /usr/include/ITK-5.3/itkEventObject.h \
+ /usr/include/ITK-5.3/itkMetaDataDictionary.h \
+ /usr/include/ITK-5.3/itkMetaDataObjectBase.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -229,12 +223,10 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/hashtable_policy.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
- /opt/itk-5.4/include/ITK-5.4/itkCommonEnums.h \
- /opt/itk-5.4/include/ITK-5.4/itkSize.h \
- /opt/itk-5.4/include/ITK-5.4/itkMakeFilled.h \
- /opt/itk-5.4/include/ITK-5.4/itkContinuousIndex.h \
- /opt/itk-5.4/include/ITK-5.4/itkPoint.h \
- /opt/itk-5.4/include/ITK-5.4/itkNumericTraits.h \
+ /usr/include/ITK-5.3/itkCommonEnums.h /usr/include/ITK-5.3/itkSize.h \
+ /usr/include/ITK-5.3/itkMakeFilled.h \
+ /usr/include/ITK-5.3/itkContinuousIndex.h \
+ /usr/include/ITK-5.3/itkPoint.h /usr/include/ITK-5.3/itkNumericTraits.h \
  /usr/include/c++/13/limits /usr/include/c++/13/complex \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -258,61 +250,56 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /opt/itk-5.4/include/ITK-5.4/itkFixedArray.h \
- /opt/itk-5.4/include/ITK-5.4/itkFixedArray.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkNumericTraitsFixedArrayPixel.h \
- /opt/itk-5.4/include/ITK-5.4/itkVector.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector_ref.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_error.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_export.h \
- /opt/itk-5.4/include/ITK-5.4/vcl_compiler.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_c_vector.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_numeric_traits.h \
- /opt/itk-5.4/include/ITK-5.4/vxl_config.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_config.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_sse.h /usr/include/c++/13/cfloat \
+ /usr/include/ITK-5.3/itkFixedArray.h \
+ /usr/include/ITK-5.3/itkFixedArray.hxx \
+ /usr/include/ITK-5.3/itkNumericTraitsFixedArrayPixel.h \
+ /usr/include/ITK-5.3/itkVector.h \
+ /usr/include/ITK-5.3/vnl/vnl_vector_ref.h \
+ /usr/include/ITK-5.3/vnl/vnl_vector.h \
+ /usr/include/ITK-5.3/vnl/vnl_error.h \
+ /usr/include/ITK-5.3/vnl/vnl_export.h \
+ /usr/include/ITK-5.3/vcl_compiler.h \
+ /usr/include/ITK-5.3/vnl/vnl_c_vector.h \
+ /usr/include/ITK-5.3/vnl/vnl_numeric_traits.h \
+ /usr/include/ITK-5.3/vxl_config.h /usr/include/ITK-5.3/vnl/vnl_config.h \
+ /usr/include/ITK-5.3/vnl/vnl_sse.h \
+ /usr/include/ITK-5.3/vcl_compiler_detection.h \
+ /usr/include/ITK-5.3/compilers/VXL_COMPILER_INFO_GNU_CXX.h \
+ /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_alloc.h \
- /opt/itk-5.4/include/ITK-5.4/itkVector.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkMath.h /usr/include/c++/13/cassert \
- /usr/include/assert.h /opt/itk-5.4/include/ITK-5.4/itkMathDetail.h \
+ /usr/include/ITK-5.3/vnl/vnl_alloc.h /usr/include/ITK-5.3/itkVector.hxx \
+ /usr/include/ITK-5.3/itkMath.h /usr/include/ITK-5.3/itkMathDetail.h \
  /usr/include/c++/13/cfenv /usr/include/c++/13/fenv.h /usr/include/fenv.h \
  /usr/include/x86_64-linux-gnu/bits/fenv.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
- /usr/include/c++/13/stdlib.h \
- /opt/itk-5.4/include/ITK-5.4/itkConceptChecking.h \
- /opt/itk-5.4/include/ITK-5.4/itkPixelTraits.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_math.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/dll.h \
- /opt/itk-5.4/include/ITK-5.4/vxl_version.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector.h \
- /opt/itk-5.4/include/ITK-5.4/itkNumericTraitsVectorPixel.h \
- /opt/itk-5.4/include/ITK-5.4/itkPoint.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkNumericTraitsPointPixel.h \
- /opt/itk-5.4/include/ITK-5.4/itkIndex.h \
- /opt/itk-5.4/include/ITK-5.4/itkOffset.h \
- /opt/itk-5.4/include/ITK-5.4/itkImageRegion.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkImportImageContainer.h \
- /opt/itk-5.4/include/ITK-5.4/itkObjectFactory.h \
- /opt/itk-5.4/include/ITK-5.4/itkObjectFactoryBase.h \
- /opt/itk-5.4/include/ITK-5.4/itkCreateObjectFunction.h \
- /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/list.tcc \
- /opt/itk-5.4/include/ITK-5.4/itkImportImageContainer.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkDefaultPixelAccessor.h \
- /opt/itk-5.4/include/ITK-5.4/itkDefaultPixelAccessorFunctor.h \
- /opt/itk-5.4/include/ITK-5.4/itkWeakPointer.h \
- /opt/itk-5.4/include/ITK-5.4/itkNeighborhoodAccessorFunctor.h \
- /opt/itk-5.4/include/ITK-5.4/itkImageBoundaryCondition.h \
- /opt/itk-5.4/include/ITK-5.4/itkNeighborhood.h \
- /opt/itk-5.4/include/ITK-5.4/itkNeighborhoodAllocator.h \
- /opt/itk-5.4/include/ITK-5.4/itkMakeUniqueForOverwrite.h \
- /opt/itk-5.4/include/ITK-5.4/itkSliceIterator.h \
- /usr/include/c++/13/valarray /usr/include/c++/13/bits/valarray_array.h \
+ /usr/include/c++/13/stdlib.h /usr/include/ITK-5.3/itkConceptChecking.h \
+ /usr/include/ITK-5.3/itkPixelTraits.h \
+ /usr/include/ITK-5.3/vnl/vnl_math.h /usr/include/ITK-5.3/vnl/dll.h \
+ /usr/include/ITK-5.3/vxl_version.h /usr/include/ITK-5.3/vnl/vnl_vector.h \
+ /usr/include/ITK-5.3/itkNumericTraitsVectorPixel.h \
+ /usr/include/ITK-5.3/itkPoint.hxx \
+ /usr/include/ITK-5.3/itkNumericTraitsPointPixel.h \
+ /usr/include/ITK-5.3/itkIndex.h /usr/include/ITK-5.3/itkOffset.h \
+ /usr/include/ITK-5.3/itkImageRegion.hxx \
+ /usr/include/ITK-5.3/itkImportImageContainer.h \
+ /usr/include/ITK-5.3/itkObjectFactory.h \
+ /usr/include/ITK-5.3/itkObjectFactoryBase.h \
+ /usr/include/ITK-5.3/itkCreateObjectFunction.h /usr/include/c++/13/list \
+ /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
+ /usr/include/ITK-5.3/itkImportImageContainer.hxx \
+ /usr/include/ITK-5.3/itkDefaultPixelAccessor.h \
+ /usr/include/ITK-5.3/itkDefaultPixelAccessorFunctor.h \
+ /usr/include/ITK-5.3/itkWeakPointer.h \
+ /usr/include/ITK-5.3/itkNeighborhoodAccessorFunctor.h \
+ /usr/include/ITK-5.3/itkImageBoundaryCondition.h \
+ /usr/include/ITK-5.3/itkNeighborhood.h \
+ /usr/include/ITK-5.3/itkNeighborhoodAllocator.h \
+ /usr/include/ITK-5.3/itkMakeUniqueForOverwrite.h \
+ /usr/include/ITK-5.3/itkSliceIterator.h /usr/include/c++/13/valarray \
+ /usr/include/c++/13/bits/valarray_array.h \
  /usr/include/c++/13/bits/valarray_array.tcc \
  /usr/include/c++/13/bits/valarray_before.h \
  /usr/include/c++/13/bits/slice_array.h \
@@ -321,131 +308,130 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/gslice_array.h \
  /usr/include/c++/13/bits/mask_array.h \
  /usr/include/c++/13/bits/indirect_array.h \
- /opt/itk-5.4/include/ITK-5.4/itkNeighborhood.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkImageBase.h \
- /opt/itk-5.4/include/ITK-5.4/itkDataObject.h \
- /opt/itk-5.4/include/ITK-5.4/itkRealTimeStamp.h \
- /opt/itk-5.4/include/ITK-5.4/itkRealTimeInterval.h \
- /opt/itk-5.4/include/ITK-5.4/itkMatrix.h \
- /opt/itk-5.4/include/ITK-5.4/itkCovariantVector.h \
- /opt/itk-5.4/include/ITK-5.4/itkNumericTraitsCovariantVectorPixel.h \
- /opt/itk-5.4/include/ITK-5.4/itkCovariantVector.hxx \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix_fixed.hxx \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix_fixed.h \
- /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/ITK-5.3/itkNeighborhood.hxx \
+ /usr/include/ITK-5.3/itkImageBase.h /usr/include/ITK-5.3/itkDataObject.h \
+ /usr/include/ITK-5.3/itkRealTimeStamp.h \
+ /usr/include/ITK-5.3/itkRealTimeInterval.h \
+ /usr/include/ITK-5.3/itkMatrix.h \
+ /usr/include/ITK-5.3/itkCovariantVector.h \
+ /usr/include/ITK-5.3/itkNumericTraitsCovariantVectorPixel.h \
+ /usr/include/ITK-5.3/itkCovariantVector.hxx \
+ /usr/include/ITK-5.3/vnl/vnl_matrix_fixed.hxx \
+ /usr/include/ITK-5.3/vnl/vnl_matrix_fixed.h /usr/include/c++/13/cstring \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix_ref.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector_fixed.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector_ref.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_math.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_complex.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_transpose.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_fastops.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/algo/vnl_matrix_inverse.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/algo/vnl_svd.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_numeric_traits.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_vector.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_diag_matrix.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/algo/vnl_algo_export.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/algo/vnl_determinant.h \
- /opt/itk-5.4/include/ITK-5.4/vnl/vnl_matrix_fixed.h \
- /opt/itk-5.4/include/ITK-5.4/itkMatrix.hxx \
- /opt/itk-5.4/include/ITK-5.4/itkImageHelper.h \
- /opt/itk-5.4/include/ITK-5.4/itkFloatTypes.h \
- /opt/itk-5.4/include/ITK-5.4/itkImageBase.hxx /usr/include/c++/13/mutex \
+ /usr/include/c++/13/cassert /usr/include/assert.h \
+ /usr/include/ITK-5.3/vnl/vnl_matrix.h \
+ /usr/include/ITK-5.3/vnl/vnl_matrix_ref.h \
+ /usr/include/ITK-5.3/vnl/vnl_vector_fixed.h \
+ /usr/include/ITK-5.3/vnl/vnl_vector_ref.h \
+ /usr/include/ITK-5.3/vnl/vnl_math.h \
+ /usr/include/ITK-5.3/vnl/vnl_complex.h \
+ /usr/include/ITK-5.3/vnl/vnl_transpose.h \
+ /usr/include/ITK-5.3/vnl/vnl_fastops.h \
+ /usr/include/ITK-5.3/vnl/algo/vnl_matrix_inverse.h \
+ /usr/include/ITK-5.3/vnl/algo/vnl_svd.h \
+ /usr/include/ITK-5.3/vnl/vnl_numeric_traits.h \
+ /usr/include/ITK-5.3/vnl/vnl_vector.h \
+ /usr/include/ITK-5.3/vnl/vnl_matrix.h \
+ /usr/include/ITK-5.3/vnl/vnl_diag_matrix.h \
+ /usr/include/ITK-5.3/vnl/algo/vnl_algo_export.h \
+ /usr/include/ITK-5.3/vnl/vnl_matrix.h \
+ /usr/include/ITK-5.3/vnl/algo/vnl_determinant.h \
+ /usr/include/ITK-5.3/vnl/vnl_matrix_fixed.h \
+ /usr/include/ITK-5.3/itkMatrix.hxx /usr/include/ITK-5.3/itkImageHelper.h \
+ /usr/include/ITK-5.3/itkFloatTypes.h \
+ /usr/include/ITK-5.3/itkImageBase.hxx /usr/include/c++/13/mutex \
  /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /opt/itk-5.4/include/ITK-5.4/itkProcessObject.h \
- /opt/itk-5.4/include/ITK-5.4/itkThreadSupport.h /usr/include/c++/13/set \
+ /usr/include/ITK-5.3/itkProcessObject.h \
+ /usr/include/ITK-5.3/itkThreadSupport.h /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h /usr/include/c++/13/thread \
  /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h \
- /opt/itk-5.4/include/ITK-5.4/itkSpatialOrientation.h \
- /opt/itk-5.4/include/ITK-5.4/itkImage.hxx \
- /home/pablomar/vision-interciclo/src/itk_opencv_bridge.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvdef.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/version.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/hal/interface.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/base.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/opencv_modules.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/neon_utils.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/vsx_utils.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/check.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/traits.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/matx.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/saturate.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/fast_math.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/matx.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/types.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/mat.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/bufferpool.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/mat.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/persistence.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/operations.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/utility.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/optim.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/ovx.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvdef.h \
- /home/pablomar/vision-interciclo/src/highlight.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/core.hpp \
- /home/pablomar/vision-interciclo/src/dnn_denoising.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/opencv.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/calib3d.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/features2d.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/miniflann.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/defines.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/config.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/affine.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/utils/logger.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/utils/logger.defines.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/utils/logtag.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/dnn.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/async.hpp \
+ /usr/include/ITK-5.3/itkSpatialOrientation.h \
+ /usr/include/ITK-5.3/itkImage.hxx \
+ /home/andres/Documents/interciclo/src/itk_opencv_bridge.hpp \
+ /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/check.hpp \
+ /usr/local/include/opencv4/opencv2/core/traits.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/types.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/local/include/opencv4/opencv2/core/operations.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/utility.hpp \
+ /usr/local/include/opencv4/opencv2/core/optim.hpp \
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /home/andres/Documents/interciclo/src/highlight.hpp \
+ /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /home/andres/Documents/interciclo/src/dnn_denoising.hpp \
+ /usr/local/include/opencv4/opencv2/opencv.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d.hpp \
+ /usr/local/include/opencv4/opencv2/features2d.hpp \
+ /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/config.h \
+ /usr/local/include/opencv4/opencv2/core/affine.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logger.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp \
+ /usr/local/include/opencv4/opencv2/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/core/async.hpp \
  /usr/include/c++/13/chrono \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/version.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/dict.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/layer.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/dnn.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/dnn/dnn.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/flann.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/flann_base.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/general.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/matrix.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/params.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/any.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/defines.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/saving.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/nn_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/result_set.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/all_indices.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/kdtree_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/dynamic_bitset.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/dist.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/heap.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/allocator.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/random.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/kdtree_single_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/kmeans_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/logger.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/composite_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/linear_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/lsh_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/lsh_table.h \
+ /usr/local/include/opencv4/opencv2/dnn/version.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/flann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
+ /usr/local/include/opencv4/opencv2/flann/general.h \
+ /usr/local/include/opencv4/opencv2/flann/matrix.h \
+ /usr/local/include/opencv4/opencv2/flann/params.h \
+ /usr/local/include/opencv4/opencv2/flann/any.h \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/saving.h \
+ /usr/local/include/opencv4/opencv2/flann/nn_index.h \
+ /usr/local/include/opencv4/opencv2/flann/result_set.h \
+ /usr/local/include/opencv4/opencv2/flann/all_indices.h \
+ /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
+ /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
+ /usr/local/include/opencv4/opencv2/flann/dist.h \
+ /usr/local/include/opencv4/opencv2/flann/heap.h \
+ /usr/local/include/opencv4/opencv2/flann/allocator.h \
+ /usr/local/include/opencv4/opencv2/flann/random.h \
+ /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
+ /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
+ /usr/local/include/opencv4/opencv2/flann/logger.h \
+ /usr/local/include/opencv4/opencv2/flann/composite_index.h \
+ /usr/local/include/opencv4/opencv2/flann/linear_index.h \
+ /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+ /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
+ /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
  /usr/include/c++/13/iomanip /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
@@ -454,52 +440,52 @@ CMakeFiles/vision_interciclo.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/math.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/autotuned_index.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/ground_truth.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/index_testing.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/timer.h \
- /opt/opencv-4.10/include/opencv4/opencv2/flann/sampling.h \
- /opt/opencv-4.10/include/opencv4/opencv2/highgui.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/imgcodecs.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/videoio.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/imgproc.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/ml.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/ml/ml.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/aruco_board.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/face.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/objdetect/barcode.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/photo.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/warpers.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cuda.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cuda_types.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cuda.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/util.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+ /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
+ /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
+ /usr/local/include/opencv4/opencv2/flann/index_testing.h \
+ /usr/local/include/opencv4/opencv2/flann/timer.h \
+ /usr/local/include/opencv4/opencv2/flann/sampling.h \
+ /usr/local/include/opencv4/opencv2/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/local/include/opencv4/opencv2/videoio.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/local/include/opencv4/opencv2/ml.hpp \
+ /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/face.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/barcode.hpp \
+ /usr/local/include/opencv4/opencv2/photo.hpp \
+ /usr/local/include/opencv4/opencv2/stitching.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
  /usr/include/c++/13/queue /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/bits/stl_queue.h \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/blenders.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/video.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/video/tracking.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/video/background_segm.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/local/include/opencv4/opencv2/video.hpp \
+ /usr/local/include/opencv4/opencv2/video/tracking.hpp \
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h

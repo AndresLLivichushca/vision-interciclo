@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+
+                // OpenCV
+                "/usr/local/include/opencv4",
+
+                // Qt6 (Ubuntu 24.04)
+                "/usr/include/x86_64-linux-gnu/qt6/**",
+                "/usr/include/x86_64-linux-gnu/qt6/QtWidgets/**",
+                "/usr/include/x86_64-linux-gnu/qt6/QtCore/**",
+                "/usr/include/x86_64-linux-gnu/qt6/QtGui/**",
+
+                // ITK 5.3
+                "/usr/include/ITK-5.3/**",
+                "/usr/lib/x86_64-linux-gnu/cmake/ITK-5.3/**"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

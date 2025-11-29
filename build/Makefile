@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pablomar/vision-interciclo
+CMAKE_SOURCE_DIR = /home/andres/Documents/interciclo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pablomar/vision-interciclo/build
+CMAKE_BINARY_DIR = /home/andres/Documents/interciclo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablomar/vision-interciclo/build/CMakeFiles /home/pablomar/vision-interciclo/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andres/Documents/interciclo/build/CMakeFiles /home/andres/Documents/interciclo/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pablomar/vision-interciclo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andres/Documents/interciclo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,12 +129,126 @@ vision_interciclo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/build
 .PHONY : vision_interciclo/fast
 
+#=============================================================================
+# Target rules for targets named vision_interciclo_qt
+
+# Build rule for target.
+vision_interciclo_qt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vision_interciclo_qt
+.PHONY : vision_interciclo_qt
+
+# fast build rule for target.
+vision_interciclo_qt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/build
+.PHONY : vision_interciclo_qt/fast
+
+#=============================================================================
+# Target rules for targets named vision_interciclo_autogen_timestamp_deps
+
+# Build rule for target.
+vision_interciclo_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vision_interciclo_autogen_timestamp_deps
+.PHONY : vision_interciclo_autogen_timestamp_deps
+
+# fast build rule for target.
+vision_interciclo_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_autogen_timestamp_deps.dir/build.make CMakeFiles/vision_interciclo_autogen_timestamp_deps.dir/build
+.PHONY : vision_interciclo_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named vision_interciclo_autogen
+
+# Build rule for target.
+vision_interciclo_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vision_interciclo_autogen
+.PHONY : vision_interciclo_autogen
+
+# fast build rule for target.
+vision_interciclo_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_autogen.dir/build.make CMakeFiles/vision_interciclo_autogen.dir/build
+.PHONY : vision_interciclo_autogen/fast
+
+#=============================================================================
+# Target rules for targets named vision_interciclo_qt_autogen_timestamp_deps
+
+# Build rule for target.
+vision_interciclo_qt_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vision_interciclo_qt_autogen_timestamp_deps
+.PHONY : vision_interciclo_qt_autogen_timestamp_deps
+
+# fast build rule for target.
+vision_interciclo_qt_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt_autogen_timestamp_deps.dir/build.make CMakeFiles/vision_interciclo_qt_autogen_timestamp_deps.dir/build
+.PHONY : vision_interciclo_qt_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named vision_interciclo_qt_autogen
+
+# Build rule for target.
+vision_interciclo_qt_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vision_interciclo_qt_autogen
+.PHONY : vision_interciclo_qt_autogen
+
+# fast build rule for target.
+vision_interciclo_qt_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt_autogen.dir/build.make CMakeFiles/vision_interciclo_qt_autogen.dir/build
+.PHONY : vision_interciclo_qt_autogen/fast
+
+src/CompareWindow.o: src/CompareWindow.cpp.o
+.PHONY : src/CompareWindow.o
+
+# target to build an object file
+src/CompareWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/CompareWindow.cpp.o
+.PHONY : src/CompareWindow.cpp.o
+
+src/CompareWindow.i: src/CompareWindow.cpp.i
+.PHONY : src/CompareWindow.i
+
+# target to preprocess a source file
+src/CompareWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/CompareWindow.cpp.i
+.PHONY : src/CompareWindow.cpp.i
+
+src/CompareWindow.s: src/CompareWindow.cpp.s
+.PHONY : src/CompareWindow.s
+
+# target to generate assembly for a file
+src/CompareWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/CompareWindow.cpp.s
+.PHONY : src/CompareWindow.cpp.s
+
+src/QtMainWindow.o: src/QtMainWindow.cpp.o
+.PHONY : src/QtMainWindow.o
+
+# target to build an object file
+src/QtMainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/QtMainWindow.cpp.o
+.PHONY : src/QtMainWindow.cpp.o
+
+src/QtMainWindow.i: src/QtMainWindow.cpp.i
+.PHONY : src/QtMainWindow.i
+
+# target to preprocess a source file
+src/QtMainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/QtMainWindow.cpp.i
+.PHONY : src/QtMainWindow.cpp.i
+
+src/QtMainWindow.s: src/QtMainWindow.cpp.s
+.PHONY : src/QtMainWindow.s
+
+# target to generate assembly for a file
+src/QtMainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/QtMainWindow.cpp.s
+.PHONY : src/QtMainWindow.cpp.s
+
 src/dnn_denoising.o: src/dnn_denoising.cpp.o
 .PHONY : src/dnn_denoising.o
 
 # target to build an object file
 src/dnn_denoising.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/dnn_denoising.cpp.o
 .PHONY : src/dnn_denoising.cpp.o
 
 src/dnn_denoising.i: src/dnn_denoising.cpp.i
@@ -143,6 +257,7 @@ src/dnn_denoising.i: src/dnn_denoising.cpp.i
 # target to preprocess a source file
 src/dnn_denoising.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/dnn_denoising.cpp.i
 .PHONY : src/dnn_denoising.cpp.i
 
 src/dnn_denoising.s: src/dnn_denoising.cpp.s
@@ -151,6 +266,7 @@ src/dnn_denoising.s: src/dnn_denoising.cpp.s
 # target to generate assembly for a file
 src/dnn_denoising.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/dnn_denoising.cpp.s
 .PHONY : src/dnn_denoising.cpp.s
 
 src/highlight.o: src/highlight.cpp.o
@@ -159,6 +275,7 @@ src/highlight.o: src/highlight.cpp.o
 # target to build an object file
 src/highlight.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/highlight.cpp.o
 .PHONY : src/highlight.cpp.o
 
 src/highlight.i: src/highlight.cpp.i
@@ -167,6 +284,7 @@ src/highlight.i: src/highlight.cpp.i
 # target to preprocess a source file
 src/highlight.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/highlight.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/highlight.cpp.i
 .PHONY : src/highlight.cpp.i
 
 src/highlight.s: src/highlight.cpp.s
@@ -175,6 +293,7 @@ src/highlight.s: src/highlight.cpp.s
 # target to generate assembly for a file
 src/highlight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/highlight.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/highlight.cpp.s
 .PHONY : src/highlight.cpp.s
 
 src/itk_loader.o: src/itk_loader.cpp.o
@@ -183,6 +302,7 @@ src/itk_loader.o: src/itk_loader.cpp.o
 # target to build an object file
 src/itk_loader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_loader.cpp.o
 .PHONY : src/itk_loader.cpp.o
 
 src/itk_loader.i: src/itk_loader.cpp.i
@@ -191,6 +311,7 @@ src/itk_loader.i: src/itk_loader.cpp.i
 # target to preprocess a source file
 src/itk_loader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_loader.cpp.i
 .PHONY : src/itk_loader.cpp.i
 
 src/itk_loader.s: src/itk_loader.cpp.s
@@ -199,6 +320,7 @@ src/itk_loader.s: src/itk_loader.cpp.s
 # target to generate assembly for a file
 src/itk_loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_loader.cpp.s
 .PHONY : src/itk_loader.cpp.s
 
 src/itk_opencv_bridge.o: src/itk_opencv_bridge.cpp.o
@@ -207,6 +329,7 @@ src/itk_opencv_bridge.o: src/itk_opencv_bridge.cpp.o
 # target to build an object file
 src/itk_opencv_bridge.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_opencv_bridge.cpp.o
 .PHONY : src/itk_opencv_bridge.cpp.o
 
 src/itk_opencv_bridge.i: src/itk_opencv_bridge.cpp.i
@@ -215,6 +338,7 @@ src/itk_opencv_bridge.i: src/itk_opencv_bridge.cpp.i
 # target to preprocess a source file
 src/itk_opencv_bridge.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_opencv_bridge.cpp.i
 .PHONY : src/itk_opencv_bridge.cpp.i
 
 src/itk_opencv_bridge.s: src/itk_opencv_bridge.cpp.s
@@ -223,6 +347,7 @@ src/itk_opencv_bridge.s: src/itk_opencv_bridge.cpp.s
 # target to generate assembly for a file
 src/itk_opencv_bridge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/itk_opencv_bridge.cpp.s
 .PHONY : src/itk_opencv_bridge.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -255,6 +380,7 @@ src/processing.o: src/processing.cpp.o
 # target to build an object file
 src/processing.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/processing.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/processing.cpp.o
 .PHONY : src/processing.cpp.o
 
 src/processing.i: src/processing.cpp.i
@@ -263,6 +389,7 @@ src/processing.i: src/processing.cpp.i
 # target to preprocess a source file
 src/processing.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/processing.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/processing.cpp.i
 .PHONY : src/processing.cpp.i
 
 src/processing.s: src/processing.cpp.s
@@ -271,7 +398,80 @@ src/processing.s: src/processing.cpp.s
 # target to generate assembly for a file
 src/processing.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/src/processing.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/processing.cpp.s
 .PHONY : src/processing.cpp.s
+
+src/qt_main.o: src/qt_main.cpp.o
+.PHONY : src/qt_main.o
+
+# target to build an object file
+src/qt_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/qt_main.cpp.o
+.PHONY : src/qt_main.cpp.o
+
+src/qt_main.i: src/qt_main.cpp.i
+.PHONY : src/qt_main.i
+
+# target to preprocess a source file
+src/qt_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/qt_main.cpp.i
+.PHONY : src/qt_main.cpp.i
+
+src/qt_main.s: src/qt_main.cpp.s
+.PHONY : src/qt_main.s
+
+# target to generate assembly for a file
+src/qt_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/src/qt_main.cpp.s
+.PHONY : src/qt_main.cpp.s
+
+vision_interciclo_autogen/mocs_compilation.o: vision_interciclo_autogen/mocs_compilation.cpp.o
+.PHONY : vision_interciclo_autogen/mocs_compilation.o
+
+# target to build an object file
+vision_interciclo_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o
+.PHONY : vision_interciclo_autogen/mocs_compilation.cpp.o
+
+vision_interciclo_autogen/mocs_compilation.i: vision_interciclo_autogen/mocs_compilation.cpp.i
+.PHONY : vision_interciclo_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+vision_interciclo_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.i
+.PHONY : vision_interciclo_autogen/mocs_compilation.cpp.i
+
+vision_interciclo_autogen/mocs_compilation.s: vision_interciclo_autogen/mocs_compilation.cpp.s
+.PHONY : vision_interciclo_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+vision_interciclo_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo.dir/build.make CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.s
+.PHONY : vision_interciclo_autogen/mocs_compilation.cpp.s
+
+vision_interciclo_qt_autogen/mocs_compilation.o: vision_interciclo_qt_autogen/mocs_compilation.cpp.o
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.o
+
+# target to build an object file
+vision_interciclo_qt_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/vision_interciclo_qt_autogen/mocs_compilation.cpp.o
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.cpp.o
+
+vision_interciclo_qt_autogen/mocs_compilation.i: vision_interciclo_qt_autogen/mocs_compilation.cpp.i
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+vision_interciclo_qt_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/vision_interciclo_qt_autogen/mocs_compilation.cpp.i
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.cpp.i
+
+vision_interciclo_qt_autogen/mocs_compilation.s: vision_interciclo_qt_autogen/mocs_compilation.cpp.s
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+vision_interciclo_qt_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_interciclo_qt.dir/build.make CMakeFiles/vision_interciclo_qt.dir/vision_interciclo_qt_autogen/mocs_compilation.cpp.s
+.PHONY : vision_interciclo_qt_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -281,7 +481,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... vision_interciclo_autogen"
+	@echo "... vision_interciclo_autogen_timestamp_deps"
+	@echo "... vision_interciclo_qt_autogen"
+	@echo "... vision_interciclo_qt_autogen_timestamp_deps"
 	@echo "... vision_interciclo"
+	@echo "... vision_interciclo_qt"
+	@echo "... src/CompareWindow.o"
+	@echo "... src/CompareWindow.i"
+	@echo "... src/CompareWindow.s"
+	@echo "... src/QtMainWindow.o"
+	@echo "... src/QtMainWindow.i"
+	@echo "... src/QtMainWindow.s"
 	@echo "... src/dnn_denoising.o"
 	@echo "... src/dnn_denoising.i"
 	@echo "... src/dnn_denoising.s"
@@ -300,6 +511,15 @@ help:
 	@echo "... src/processing.o"
 	@echo "... src/processing.i"
 	@echo "... src/processing.s"
+	@echo "... src/qt_main.o"
+	@echo "... src/qt_main.i"
+	@echo "... src/qt_main.s"
+	@echo "... vision_interciclo_autogen/mocs_compilation.o"
+	@echo "... vision_interciclo_autogen/mocs_compilation.i"
+	@echo "... vision_interciclo_autogen/mocs_compilation.s"
+	@echo "... vision_interciclo_qt_autogen/mocs_compilation.o"
+	@echo "... vision_interciclo_qt_autogen/mocs_compilation.i"
+	@echo "... vision_interciclo_qt_autogen/mocs_compilation.s"
 .PHONY : help
 
 

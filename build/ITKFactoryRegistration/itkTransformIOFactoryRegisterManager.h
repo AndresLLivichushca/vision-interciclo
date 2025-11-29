@@ -38,7 +38,7 @@ class TransformIOFactoryRegisterManager
 //  The following code is intended to be expanded at the end of the
 //  itkTransformFileReader.h and itkTransformFileWriter.h files.
 //
-void  HDF5TransformIOFactoryRegister__Private();void  MatlabTransformIOFactoryRegister__Private();void  TxtTransformIOFactoryRegister__Private();
+void ITK_ABI_IMPORT HDF5TransformIOFactoryRegister__Private();void ITK_ABI_IMPORT MatlabTransformIOFactoryRegister__Private();void ITK_ABI_IMPORT TxtTransformIOFactoryRegister__Private();
 
 //
 // The code below registers available IO helpers using static initialization in

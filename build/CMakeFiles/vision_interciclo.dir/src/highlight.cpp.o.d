@@ -1,11 +1,11 @@
 CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
- /home/pablomar/vision-interciclo/src/highlight.cpp \
+ /home/andres/Documents/interciclo/src/highlight.cpp \
  /usr/include/stdc-predef.h \
- /home/pablomar/vision-interciclo/src/highlight.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/core.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvdef.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/version.hpp \
+ /home/andres/Documents/interciclo/src/highlight.hpp \
+ /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
  /usr/include/c++/13/limits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -18,7 +18,7 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h \
  /usr/include/c++/13/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/cstdint \
@@ -31,7 +31,7 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
@@ -70,8 +70,8 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/13/bits/std_abs.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/base.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
@@ -106,7 +106,7 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/c++/13/bits/stl_construct.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -184,7 +184,7 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
@@ -216,28 +216,27 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/neon_utils.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/include/assert.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/check.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/traits.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/matx.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/saturate.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/fast_math.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/matx.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/types.hpp \
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/assert.h /usr/local/include/opencv4/opencv2/core/check.hpp \
+ /usr/local/include/opencv4/opencv2/core/traits.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/types.hpp \
  /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /opt/opencv-4.10/include/opencv4/opencv2/core/mat.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
- /opt/opencv-4.10/include/opencv4/opencv2/core/mat.inl.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/persistence.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/operations.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/local/include/opencv4/opencv2/core/operations.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/13/complex /usr/include/c++/13/sstream \
  /usr/include/c++/13/istream /usr/include/c++/13/ios \
  /usr/include/c++/13/bits/ios_base.h \
@@ -258,7 +257,7 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
- /opt/opencv-4.10/include/opencv4/opencv2/core/utility.hpp \
+ /usr/local/include/opencv4/opencv2/core/utility.hpp \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
@@ -271,9 +270,9 @@ CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /opt/opencv-4.10/include/opencv4/opencv2/core/optim.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/ovx.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/core/cvdef.h \
- /opt/opencv-4.10/include/opencv4/opencv2/imgproc.hpp \
- /opt/opencv-4.10/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/local/include/opencv4/opencv2/core/optim.hpp \
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/c++/13/iostream

@@ -38,7 +38,7 @@ class MeshIOFactoryRegisterManager
 //  The following code is intended to be expanded at the end of the
 //  itkMeshFileReader.h and itkMeshFileWriter.h files.
 //
-void  BYUMeshIOFactoryRegister__Private();void  BYUMeshIOFactoryRegister__Private();void  FreeSurferAsciiMeshIOFactoryRegister__Private();void  FreeSurferAsciiMeshIOFactoryRegister__Private();void  FreeSurferBinaryMeshIOFactoryRegister__Private();void  FreeSurferBinaryMeshIOFactoryRegister__Private();void  GiftiMeshIOFactoryRegister__Private();void  GiftiMeshIOFactoryRegister__Private();void  OBJMeshIOFactoryRegister__Private();void  OBJMeshIOFactoryRegister__Private();void  OFFMeshIOFactoryRegister__Private();void  OFFMeshIOFactoryRegister__Private();void  VTKPolyDataMeshIOFactoryRegister__Private();
+void ITK_ABI_IMPORT BYUMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT BYUMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT FreeSurferAsciiMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT FreeSurferAsciiMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT FreeSurferBinaryMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT FreeSurferBinaryMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT GiftiMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT GiftiMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT OBJMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT OBJMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT OFFMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT OFFMeshIOFactoryRegister__Private();void ITK_ABI_IMPORT VTKPolyDataMeshIOFactoryRegister__Private();
 
 //
 // The code below registers available IO helpers using static initialization in

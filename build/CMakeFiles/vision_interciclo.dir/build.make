@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pablomar/vision-interciclo
+CMAKE_SOURCE_DIR = /home/andres/Documents/interciclo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pablomar/vision-interciclo/build
+CMAKE_BINARY_DIR = /home/andres/Documents/interciclo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vision_interciclo.dir/depend.make
@@ -69,92 +69,113 @@ include CMakeFiles/vision_interciclo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vision_interciclo.dir/flags.make
 
+vision_interciclo_autogen/timestamp: /usr/lib/qt5/bin/moc
+vision_interciclo_autogen/timestamp: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target vision_interciclo"
+	/usr/bin/cmake -E cmake_autogen /home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E touch /home/andres/Documents/interciclo/build/vision_interciclo_autogen/timestamp
+
+CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
+CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o: vision_interciclo_autogen/mocs_compilation.cpp
+CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o -MF CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o -c /home/andres/Documents/interciclo/build/vision_interciclo_autogen/mocs_compilation.cpp
+
+CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/build/vision_interciclo_autogen/mocs_compilation.cpp > CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/build/vision_interciclo_autogen/mocs_compilation.cpp -o CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/vision_interciclo.dir/src/main.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/main.cpp.o: /home/pablomar/vision-interciclo/src/main.cpp
+CMakeFiles/vision_interciclo.dir/src/main.cpp.o: /home/andres/Documents/interciclo/src/main.cpp
 CMakeFiles/vision_interciclo.dir/src/main.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vision_interciclo.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/main.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/main.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/main.cpp.o -c /home/pablomar/vision-interciclo/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vision_interciclo.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/main.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/main.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/main.cpp.o -c /home/andres/Documents/interciclo/src/main.cpp
 
 CMakeFiles/vision_interciclo.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/main.cpp > CMakeFiles/vision_interciclo.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/main.cpp > CMakeFiles/vision_interciclo.dir/src/main.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/main.cpp -o CMakeFiles/vision_interciclo.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/main.cpp -o CMakeFiles/vision_interciclo.dir/src/main.cpp.s
 
 CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o: /home/pablomar/vision-interciclo/src/itk_loader.cpp
+CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o: /home/andres/Documents/interciclo/src/itk_loader.cpp
 CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o -c /home/pablomar/vision-interciclo/src/itk_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o -c /home/andres/Documents/interciclo/src/itk_loader.cpp
 
 CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/itk_loader.cpp > CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/itk_loader.cpp > CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/itk_loader.cpp -o CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/itk_loader.cpp -o CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.s
 
 CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o: /home/pablomar/vision-interciclo/src/itk_opencv_bridge.cpp
+CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o: /home/andres/Documents/interciclo/src/itk_opencv_bridge.cpp
 CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o -c /home/pablomar/vision-interciclo/src/itk_opencv_bridge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o -c /home/andres/Documents/interciclo/src/itk_opencv_bridge.cpp
 
 CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/itk_opencv_bridge.cpp > CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/itk_opencv_bridge.cpp > CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/itk_opencv_bridge.cpp -o CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/itk_opencv_bridge.cpp -o CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.s
 
 CMakeFiles/vision_interciclo.dir/src/processing.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/processing.cpp.o: /home/pablomar/vision-interciclo/src/processing.cpp
+CMakeFiles/vision_interciclo.dir/src/processing.cpp.o: /home/andres/Documents/interciclo/src/processing.cpp
 CMakeFiles/vision_interciclo.dir/src/processing.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vision_interciclo.dir/src/processing.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/processing.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/processing.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/processing.cpp.o -c /home/pablomar/vision-interciclo/src/processing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vision_interciclo.dir/src/processing.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/processing.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/processing.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/processing.cpp.o -c /home/andres/Documents/interciclo/src/processing.cpp
 
 CMakeFiles/vision_interciclo.dir/src/processing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/processing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/processing.cpp > CMakeFiles/vision_interciclo.dir/src/processing.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/processing.cpp > CMakeFiles/vision_interciclo.dir/src/processing.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/processing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/processing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/processing.cpp -o CMakeFiles/vision_interciclo.dir/src/processing.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/processing.cpp -o CMakeFiles/vision_interciclo.dir/src/processing.cpp.s
 
 CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: /home/pablomar/vision-interciclo/src/highlight.cpp
+CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: /home/andres/Documents/interciclo/src/highlight.cpp
 CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o -c /home/pablomar/vision-interciclo/src/highlight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o -c /home/andres/Documents/interciclo/src/highlight.cpp
 
 CMakeFiles/vision_interciclo.dir/src/highlight.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/highlight.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/highlight.cpp > CMakeFiles/vision_interciclo.dir/src/highlight.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/highlight.cpp > CMakeFiles/vision_interciclo.dir/src/highlight.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/highlight.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/highlight.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/highlight.cpp -o CMakeFiles/vision_interciclo.dir/src/highlight.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/highlight.cpp -o CMakeFiles/vision_interciclo.dir/src/highlight.cpp.s
 
 CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o: CMakeFiles/vision_interciclo.dir/flags.make
-CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o: /home/pablomar/vision-interciclo/src/dnn_denoising.cpp
+CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o: /home/andres/Documents/interciclo/src/dnn_denoising.cpp
 CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o: CMakeFiles/vision_interciclo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o -c /home/pablomar/vision-interciclo/src/dnn_denoising.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o -MF CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o.d -o CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o -c /home/andres/Documents/interciclo/src/dnn_denoising.cpp
 
 CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pablomar/vision-interciclo/src/dnn_denoising.cpp > CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andres/Documents/interciclo/src/dnn_denoising.cpp > CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.i
 
 CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pablomar/vision-interciclo/src/dnn_denoising.cpp -o CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andres/Documents/interciclo/src/dnn_denoising.cpp -o CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.s
 
 # Object files for target vision_interciclo
 vision_interciclo_OBJECTS = \
+"CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/vision_interciclo.dir/src/main.cpp.o" \
 "CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o" \
 "CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o" \
@@ -165,6 +186,7 @@ vision_interciclo_OBJECTS = \
 # External object files for target vision_interciclo
 vision_interciclo_EXTERNAL_OBJECTS =
 
+vision_interciclo: CMakeFiles/vision_interciclo.dir/vision_interciclo_autogen/mocs_compilation.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/src/main.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/src/itk_loader.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/src/itk_opencv_bridge.cpp.o
@@ -172,229 +194,194 @@ vision_interciclo: CMakeFiles/vision_interciclo.dir/src/processing.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/src/highlight.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/src/dnn_denoising.cpp.o
 vision_interciclo: CMakeFiles/vision_interciclo.dir/build.make
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_gapi.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_stitching.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_aruco.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_bgsegm.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_bioinspired.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_ccalib.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_dnn_objdetect.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_dnn_superres.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_dpm.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_face.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_freetype.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_fuzzy.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_hfs.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_img_hash.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_intensity_transform.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_line_descriptor.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_mcc.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_quality.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_rapid.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_reg.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_rgbd.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_saliency.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_signal.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_stereo.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_structured_light.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_superres.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_surface_matching.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_tracking.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_videostab.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_wechat_qrcode.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_xfeatures2d.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_xobjdetect.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_xphoto.so.4.10.0
-vision_interciclo: /opt/itk-5.4/lib/libitkdouble-conversion-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitksys-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvnl_algo-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvnl-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkv3p_netlib-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvcl-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKCommon-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkNetlibSlatec-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKStatistics-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKTransform-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMesh-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkzlib-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMetaIO-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKSpatialObjects-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKPath-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKLabelMap-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMathematicalMorphology-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKQuadEdgeMesh-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKFastMarching-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOImageBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKFFT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKConvolution-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKSmoothing-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKImageFeature-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKOptimizers-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKPolynomials-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKBiasCorrection-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKColormap-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKDICOMParser-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKDeformableMesh-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKDenoising-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKDiffusionTensorImage-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKEXPAT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmDICT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmMSFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKznz-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKniftiio-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKgiftiio-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKPDEDeformableRegistration-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5_cpp-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5_hl-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOBMP-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOBioRad-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOBruker-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOCSV-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOGDCM-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOIPL-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOGE-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOGIPL-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOHDF5-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkjpeg-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOJPEG-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkopenjpeg-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOJPEG2000-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitktiff-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTIFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOLSM-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkminc2-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMINC-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMRC-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshBYU-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshFreeSurfer-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshGifti-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshOBJ-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshOFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshVTK-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeta-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIONIFTI-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKNrrdIO-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIONRRD-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkpng-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOPNG-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOSiemens-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOXML-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOSpatialObjects-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOStimulate-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKTransformFactory-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTransformBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTransformHDF5-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTransformInsightLegacy-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTransformMatlab-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOVTK-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKKLMRegionGrowing-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitklbfgs-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMarkovRandomFieldsClassifiers-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKOptimizersv4-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKQuadEdgeMeshFiltering-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKRegionGrowing-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKRegistrationMethodsv4-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKTestKernel-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKVTK-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKVideoCore-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKVideoIO-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKWatersheds-5.4.a
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_shape.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_highgui.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_datasets.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_plot.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_text.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_ml.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_phase_unwrapping.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_optflow.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_ximgproc.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_video.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_videoio.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_imgcodecs.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_objdetect.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_calib3d.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_dnn.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_features2d.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_flann.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_photo.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_imgproc.so.4.10.0
-vision_interciclo: /opt/opencv-4.10/lib/libopencv_core.so.4.10.0
-vision_interciclo: /opt/itk-5.4/lib/libitkopenjpeg-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkminc2-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOIPL-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOXML-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5_cpp-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5_hl-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkhdf5-static-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTransformBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKTransformFactory-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKImageFeature-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKOptimizersv4-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKOptimizers-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitklbfgs-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKFFT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOBMP-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOGDCM-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmMSFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmDICT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmIOD-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmDSED-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmCommon-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmjpeg8-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmjpeg12-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmjpeg16-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmopenjp2-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmcharls-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkgdcmuuid-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOGIPL-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOJPEG-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOTIFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitktiff-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkjpeg-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshBYU-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshFreeSurfer-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshGifti-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKgiftiio-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKEXPAT-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshOBJ-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshOFF-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshVTK-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeshBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKQuadEdgeMesh-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOMeta-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMetaIO-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIONIFTI-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKniftiio-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKznz-5.4.a
+vision_interciclo: /usr/local/lib/libopencv_gapi.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_stitching.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_alphamat.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_aruco.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_bgsegm.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_bioinspired.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_ccalib.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_dnn_objdetect.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_dnn_superres.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_dpm.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_face.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_freetype.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_fuzzy.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_hdf.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_hfs.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_img_hash.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_intensity_transform.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_line_descriptor.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_mcc.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_quality.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_rapid.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_reg.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_rgbd.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_saliency.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_signal.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_stereo.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_structured_light.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_superres.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_surface_matching.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_tracking.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_videostab.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_viz.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_wechat_qrcode.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_xfeatures2d.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_xobjdetect.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_xphoto.so.4.10.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libz.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libjpeg.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libexpat.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libpng.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKTestKernel-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKConvolution-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKColormap-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKDICOMParser-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKDenoising-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_cpp.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOBruker-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOCSV-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOHDF5-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOJPEG2000-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOLSM-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMINC-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMRC-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKRegistrationMethodsv4-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKReview-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKVideoIO-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKVtkGlue-5.3.so.1
+vision_interciclo: /usr/local/lib/libopencv_shape.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_highgui.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_datasets.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_plot.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_text.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_ml.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_phase_unwrapping.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_optflow.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_ximgproc.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_video.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_videoio.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_imgcodecs.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_objdetect.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_calib3d.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_dnn.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_features2d.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_flann.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_photo.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_imgproc.so.4.10.0
+vision_interciclo: /usr/local/lib/libopencv_core.so.4.10.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshBYU-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshFreeSurfer-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshGifti-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKgiftiio-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libexpat.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshOBJ-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshOFF-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshVTK-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeshBase-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKOptimizersv4-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitklbfgs-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOBMP-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOGDCM-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libgdcmMSFF.so.3.0.22
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libgdcmDICT.so.3.0.22
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libgdcmIOD.so.3.0.22
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libgdcmDSED.so.3.0.22
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libgdcmCommon.so.3.0.22
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOGIPL-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOJPEG-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKQuadEdgeMesh-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOMeta-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKMetaIO-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIONIFTI-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKniftiio-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKznz-5.3.so.1
 vision_interciclo: /usr/lib/x86_64-linux-gnu/libm.so
-vision_interciclo: /opt/itk-5.4/lib/libITKIONRRD-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKNrrdIO-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOPNG-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkpng-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkzlib-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOVTK-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKIOImageBase-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKVideoCore-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMathematicalMorphology-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKStatistics-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkNetlibSlatec-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKSpatialObjects-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKMesh-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKTransform-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKPath-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKCommon-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkdouble-conversion-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitksys-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKVNLInstantiation-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvnl_algo-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvnl-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkv3p_netlib-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libitkvcl-5.4.a
-vision_interciclo: /opt/itk-5.4/lib/libITKSmoothing-5.4.a
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIONRRD-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKNrrdIO-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOPNG-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOTIFF-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitktiff-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libz.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libjpeg.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOVTK-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKLabelMap-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKFastMarching-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKPolynomials-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKBiasCorrection-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKDeformableMesh-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKDiffusionTensorImage-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKPDEDeformableRegistration-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKFFT-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKImageFeature-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKOptimizers-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOBioRad-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOGE-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOSiemens-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOIPL-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkopenjpeg-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOSpatialObjects-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOXML-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOStimulate-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOTransformHDF5-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOTransformInsightLegacy-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOTransformMatlab-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOTransformBase-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKTransformFactory-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKKLMRegionGrowing-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKMarkovRandomFieldsClassifiers-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKQuadEdgeMeshFiltering-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKRegionGrowing-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKWatersheds-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKMathematicalMorphology-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKStatistics-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkNetlibSlatec-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKSpatialObjects-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKMesh-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKTransform-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKPath-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKSmoothing-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKIOImageBase-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKVideoCore-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKVTK-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKCommon-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkdouble-conversion-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitksys-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libITKVNLInstantiation-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkvnl_algo-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkvnl-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkv3p_netlib-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libitkvcl-5.3.so.1
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkRenderingUI-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libGLEW.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libX11.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkInteractionWidgets-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkInteractionStyle-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkRenderingContext2D-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkImagingSources-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkIOImage-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkRenderingFreeType-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libfreetype.so
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkImagingCore-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkRenderingCore-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkFiltersSources-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkFiltersGeneral-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkFiltersCore-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonExecutionModel-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonDataModel-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonTransforms-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonMisc-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonMath-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkkissfft-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtkCommonCore-9.1.so.9.1.0
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libtbb.so.12.11
+vision_interciclo: /usr/lib/x86_64-linux-gnu/libvtksys-9.1.so.9.1.0
 vision_interciclo: CMakeFiles/vision_interciclo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/pablomar/vision-interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable vision_interciclo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/andres/Documents/interciclo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable vision_interciclo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vision_interciclo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -405,7 +392,7 @@ CMakeFiles/vision_interciclo.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/vision_interciclo.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/vision_interciclo.dir/clean
 
-CMakeFiles/vision_interciclo.dir/depend:
-	cd /home/pablomar/vision-interciclo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pablomar/vision-interciclo /home/pablomar/vision-interciclo /home/pablomar/vision-interciclo/build /home/pablomar/vision-interciclo/build /home/pablomar/vision-interciclo/build/CMakeFiles/vision_interciclo.dir/DependInfo.cmake "--color=$(COLOR)"
+CMakeFiles/vision_interciclo.dir/depend: vision_interciclo_autogen/timestamp
+	cd /home/andres/Documents/interciclo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andres/Documents/interciclo /home/andres/Documents/interciclo /home/andres/Documents/interciclo/build /home/andres/Documents/interciclo/build /home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/vision_interciclo.dir/depend
 

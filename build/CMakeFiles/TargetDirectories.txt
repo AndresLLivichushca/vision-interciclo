@@ -1,3 +1,8 @@
-/home/pablomar/vision-interciclo/build/CMakeFiles/vision_interciclo.dir
-/home/pablomar/vision-interciclo/build/CMakeFiles/edit_cache.dir
-/home/pablomar/vision-interciclo/build/CMakeFiles/rebuild_cache.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_qt.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/edit_cache.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/rebuild_cache.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_autogen_timestamp_deps.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_autogen.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_qt_autogen_timestamp_deps.dir
+/home/andres/Documents/interciclo/build/CMakeFiles/vision_interciclo_qt_autogen.dir

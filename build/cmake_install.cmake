@@ -1,4 +1,4 @@
-# Install script for directory: /home/pablomar/vision-interciclo
+# Install script for directory: /home/andres/Documents/interciclo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pablomar/vision-interciclo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/andres/Documents/interciclo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
