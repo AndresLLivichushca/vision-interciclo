@@ -10,6 +10,6 @@ struct TissueStats {
 
 struct SliceStats {
     TissueStats fat;      // grasa
-    TissueStats muscle;   // músculo 
+    TissueStats muscle;   // músculo/ tendon 
     TissueStats bone;     // hueso
 };
